@@ -1,0 +1,480 @@
+html{
+  overflow-x: hidden;
+}
+.peL{
+  text-decoration: none;
+  color: inherit;
+}
+#CardsCont{
+  color: white;
+  border-style: none;
+  display: grid;
+}
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#mpCont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgMP {
+  height: 110px;
+  width: 80px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid red;
+}
+
+.card-item {
+  margin-bottom: 20px;
+}
+.peL:hover{
+  text-decoration: none;
+  color: inherit;
+  cursor:pointer;
+}
+.textoCarrinho{
+    text-align: justify;
+    font-size: 12px;
+}
+.carrinho{
+  width: 50px;
+  height: 50px;
+}
+#iconContato{
+  font-size: 24px;
+}
+.pI{
+  font-size: 30px;
+}
+a{
+    text-decoration:none;
+}
+.nav{
+  justify-content: right;
+}
+.PS{
+ align-content: left;
+}
+.linksRapidos{
+    text-align: left;
+    padding: none;
+    margin: none;
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: none;
+}
+    #imagemLogo{
+        width:100px;
+        height:100px;
+    }
+.estrelasCard{
+  font-size: 20px
+}
+.textoFooter{
+  font-size: 20px;
+}
+header{
+    background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
+    color:aliceblue;
+}
+.estrelasMP{
+  font-size: 20px;
+}
+
+.Filtro{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 20px;
+}
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    padding: none;
+    margin: none;
+  }
+img {
+    max-width: 100%;
+}
+header{
+    max-width: 100%;
+}
+footer{
+    max-width: 100%;
+}
+.newsletter{
+  font-size: 30px;
+}
+.newsletterTexto{
+  font-size: 25px;
+}
+#imCa{
+  height: 400px;
+}
+.test1{
+  grid-column: 3;
+  max-width: 16rem;
+  font-size: large;
+  flex-wrap: wrap;
+  color: red;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color:gold;
+  box-shadow: 10px;
+}
+.CardCAR1{
+  grid-column: 3;
+  height: 19rem;
+  width: auto;
+}
+#PagCho{
+  position: absolute;
+  right: 0%;
+}
+@media(min-width:2000px){
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+#imagemLogo{
+    width:100px;
+    height:30px;
+}
+.imgMP{
+    width:200px;
+    height: 220px;
+}
+.card{
+    max-width: 8000%;
+  /*   max-height: 8%; */
+}
+#imCa{
+  height: 400px;
+}
+#Cards{
+  border-style: solid;
+  border-width: 3px;
+  height: 798px;
+}
+.card-img-top{
+    height: 410px;
+}
+.email{
+    line-break: anywhere;
+}
+header{
+  align-items:self-end;
+}
+
+.Filtro{
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 40px;
+}
+.tituloMP{
+font-size: 35px;
+}
+.estrelasMP{
+font-size: 40px;
+}
+.newsletter{
+
+font-size: 50px;
+
+text-align: center;
+}
+.newsletterTexto{
+font-size: 40px;
+}
+.contatos{
+  line-break: auto;
+}
+.email{
+  line-break: anywhere;
+}
+.card .card-title {
+font-size: 40px;
+}
+.card .card-text {
+font-size: 30px;
+}
+.estrelasCard {
+font-size: 30px;
+}
+.pI{
+  font-size: 70px;
+}
+.linksRapidos{
+  font-size: 30px;
+}
+.textoFooter{
+  font-size: 50px;
+}
+.contatos{
+  font-size: 40px;
+}
+#iconContato{
+  font-size: 50px;
+}
+.nav{
+  align-content: left;
+  font-size: 20px;
+}
+.PS{
+  font-size: 20px;
+}
+.carrinho{
+  width: 90px;
+  height: 90px;
+}
+.textoCarrinho{
+  font-size: 25px;
+}
+
+}
+
+@media(max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+    #imagemLogo{
+        width:80px;
+        height:30px;
+    }
+    .imgMP{
+        width:80px;
+        height: 100px;
+    }
+    .card{
+        max-width: 100%;
+        max-height: 1%;
+    }
+    .card-img-top{
+        height: 410px;
+    }
+    .email{
+        line-break: anywhere;
+    }
+    #imCa{
+      width: auto;
+    }
+    #Cards{
+      border-style:dashed;
+      border-width: 2px;
+      height: 450px;
+    }
+    #imCa{
+      min-height: 200px;
+    }
+    #TiCr{
+      font-size: medium;
+    }
+    #Cards{
+      width: 192px;
+    }
+}
+
+@media (max-width: 912px) {
+    header{
+        align-items:self-end;
+    }
+
+    .Filtro{
+        display: grid;
+        grid-auto-flow: row;
+        grid-row-gap: 5px;
+    }
+    .imgMP{
+        width:80px;
+        height:100px;
+    }
+    .card-img-top{
+        height: 310px;
+    }
+    .email{
+        line-break: anywhere;
+    }
+    .tituloMP{
+      font-size: 13px;
+    }
+    .estrelasMP{
+      font-size: 10px;
+    }
+      .newsletter{
+
+      font-size: 20px;
+
+      text-align: center;
+    }
+  .newsletterTexto{
+    font-size: 15px;
+  }
+  #imagemLogo{
+
+     width:100px;
+
+     height:120px;
+}
+.estrelasCard {
+  font-size: 13px;
+  }
+#imCa{
+  width: auto;
+}
+#Cards{
+  border-style:dashed;
+  border-width: 2px;
+  height: 450px;
+}
+#imCa{
+  min-height: 200px;
+}
+#TiCr{
+  font-size: medium;
+}
+#Cards{
+  width: 180px;
+}
+}
+
+@media (max-width: 540px) {
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+    header{
+        align-items:self-end;
+    }
+
+    .Filtro{
+        display: grid;
+        grid-auto-flow: row;
+        grid-row-gap: 5px;
+    }
+    .imgMP{
+        width:90px;
+        height:110px;;
+    }
+    .card-img-top{
+        height: 250px;
+    }
+    .contatos{
+        line-break: auto;
+    }
+    .email{
+        line-break: anywhere;
+    }
+    .card{
+        max-width: 110%;
+        max-height: 90%;
+    }
+    .card .card-title {
+      font-size: 15px;
+    }
+    .card .card-text {
+      font-size: 10px;
+    }
+    .estrelasCard {
+      font-size: 10px;
+    }
+     .tituloMP{
+
+      font-size: 15px;
+
+    }
+    .estrelasMP{
+      font-size: 20px;
+    }
+    .textoFooter{
+      font-size: 14px;
+    }
+    .pI{
+      font-size: 15px;
+    }
+    .linksRapidos{
+      font-size: 10px;
+    }
+    .contatos{
+      font-size: 10px;
+    }
+    #iconContato{
+      font-size: 12px;
+    }
+    .newsletter{
+      font-size: 20px;
+      text-align: center;
+    }
+  .newsletterTexto{
+    font-size: 15px;
+  }
+      #imagemLogo{
+        width:90px;
+        height:20px;
+    }
+    .welcome{
+      font-size: 10px;
+    }
+  .navegacao{
+    align-content: left;
+  }
+  .nav{
+    justify-content: left;
+    font-size: 10px;
+  }
+  .PS{
+    font-size: 10px;
+  }
+  .carrinho{
+    width: 40px;
+    height: 40px;
+  }
+  .textoCarrinho{
+    font-size: 8px;
+  }
+  .card{
+    max-width:100%;
+  }
+  #imCa{
+    min-height: 100px;
+  }
+  #TiCr{
+    font-size: small;
+  }
+  #CoP{
+    font-size: x-small;
+  }
+}
+@media(max-width:320px){
+  header{
+  display: grid;
+ grid-auto-flow: row;
+
+  }
+  #imagemLogo{
+    width:70px;
+    height:20px;
+}
+.card{
+  max-width: 110%;
+  max-height: 90%;
+}
+.card .card-title {
+font-size: 10px;
+}
+.card .card-text {
+font-size: 9px;
+}
+.estrelasCard {
+font-size: 7px;
+}
+.textoFooter{
+  font-size: 12px;
+}
+#CoP{
+  font-size: xx-small;
+}
+}
