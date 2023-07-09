@@ -70,26 +70,27 @@ async function loadCard(){
         fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=7;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
         <option selected value="">Genero</option>
         <option value="Action">Ação</option>
+        <option value="Arts Marciais">Artes Marciais</option>
         <option value="Adventure">Aventura</option>
-        <option value="Fantasy">Fantasia</option>
-        <option value="Dark Fantasy">Fantasia sombria</option>
+        <option value="Comedia">Comédia</option>
+        <option value="Detective">Detetive</option>
+        <option value="ecchi">Ecchi</option>
+        <option value="Fantasia">Fantasia</option>
+        <option value="Dark Fantasy">Fantasia Sombria</option>
+        <option value="Ficção Cientifica">Ficção Científica</option>
+        <option value="Harem">Harem</option>
         <option value="Isekai">Isekai</option>
-        <option value="ecchi">ecchi</option>
-        <option value="Comedy">Comedia</option>
+        <option value="Mature">Maturo</option>
+        <option value="Misterio">Mistério</option>
+        <option value="Romance">Romance</option>
+        <option value="Seinen">Seinen</option>
         <option value="Shounen">Shounen</option>
         <option value="Slice of Life">Slice of Life</option>
-        <option value="Martial Arts">Arts Marciais</option>
-        <option value="Romance">Romance</option>
+        <option value="Sobrenatural">Sobrenatural</option>
+        <option value="Super-heroi">Super-herói</option>
+        <option value="Tragedia">Tragédia</option>
         <option value="Xuanhuan">Xuanhuan</option>
-        <option value="science fiction">Ficção Cientifica</option>
-        <option value="mystery">Misterio</option>
-        <option value="supernatural">Sobrenatural</option>
-        <option value="Detective">Detetive</option>
-        <option value="Tragedy">Tragedia</option>
-        <option value="Harem">Harem</option>
-        <option value="Mature">Adulto</option>
-        <option value="Seinen">Seinen</option>
-    </select>
+    </select>    
     <select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f2" onfocus='this.size=5;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
         <option selected value="">Categoria</option>
         <option value="Manga">Manga</option>
