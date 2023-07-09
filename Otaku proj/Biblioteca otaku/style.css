@@ -31,6 +31,8 @@ html{
 
 .card-item {
   margin-bottom: 20px;
+  min-width: 405px;
+  max-width: 0px;
 }
 .peL:hover{
   text-decoration: none;

@@ -8,163 +8,99 @@ function trocarPagina() {
 
 
 function filtro() {
-    console.log(produtosAPI['category']['Manga'])
-    /* if(pagMark <3){
-    var fi = document.getElementById(`f1`).value;
-    console.log(fi);
-    lerAPI(fi);}
-    else{
-        var fi = document.getElementById(`f1`).value;
-        console.log(fi);
-        var pa = document.getElementById(`f2`).value;
-        localStorage.setItem('q', pa)
-        console.log();
-        lerAPI(fi); 
-    } */
+  var fi = document.getElementById('f1').value
+  var fc = document.getElementById('f2').value
+        lerAPI(fi, fc); 
   }
-async function lerAPI(filtro = ""){
-    var pagMark= 1
-    if(pagMark==2){
-    let produtosAPI
-
-    let url = "https://fakestoreapi.com/products";
-    if (filtro) {
-      url += `/category/${filtro}`;
+  async function lerAPI(filtro = "",filtro2 = "") {
+    const response = await fetch('./base.json');
+    const base = await response.json();
+    let produtosAPI = base.itens;
+    let carrossa = base.carr;
+  
+    if (filtro && filtro2) {
+      produtosAPI = produtosAPI.filter(product => {
+        const { gender, displayCategories } = product;
+        const desiredGender = filtro;
+        const desiredCategory = filtro2; 
+        return (
+          (gender && gender.includes(desiredGender)) &&
+          (displayCategories && displayCategories === desiredCategory)
+        );
+      });
     }
-    const response = await fetch(url);
-    produtosAPI = await response.json();
-    changeCard(produtosAPI);}
-    else if(pagMark==3){
-    let produtosAPI
-    let p = localStorage.getItem('q')
-    let url = "https://diwserver.vps.webdock.cloud/products";
-    if (filtro && p==1) {
-        url += `/category/${filtro}`;
-      }
-      else if (filtro && p !== "1") {
-        url += `/category/${filtro}?page=${p}`;
-      }
-      
-    response = await fetch(url);
-    produtosAPI = await response.json();
+    else if (filtro && !filtro2) {
+      produtosAPI = produtosAPI.filter(product => {
+        const { gender} = product;
+        const desiredGender = filtro; 
+        return (
+          (gender && gender.includes(desiredGender))
+        );
+      });
+    }
+    else if (!filtro && filtro2) {
+      produtosAPI = produtosAPI.filter(product => {
+        const { displayCategories } = product;
+        const desiredCategory = filtro2; 
+        return (
+          (displayCategories && displayCategories === desiredCategory)
+        );
+      });
+    }
     changeCard(produtosAPI);
-    }
-    else{
-      const response = await fetch('./base.json');
-      base = await response.json();
-        let produtosAPI = await base.itens
-        let carrossa = await base.carr
-        changeCard(produtosAPI);
-        changeCar(carrossa)
-    }
-} 
+    changeCar(carrossa);
+  }
+  async function lerAPI2(){
+    const response = await fetch('./base.json');
+    base = await response.json();
+      let produtosAPI = await base.itens
+          changeMP(produtosAPI)
+  }
 async function loadCard(){
         document.getElementById(`carossa`).style.visibility="hidden";
-        document.getElementById(`f2`).style.display="none";
-        document.getElementById(`f3`).style.display="none";
-        document.getElementById(`f1`).style.display="none";
-        document.getElementById(`fl`).style.display="none";
-        document.getElementById(`fb`).style.display="none";
-        async function lerAPI2(){
-          const response = await fetch('./base.json');
-          base = await response.json();
-            let produtosAPI = await base.itens
-                changeMP(produtosAPI)
-/*                 console.log(produtosAPI) */
+        var fb = document.getElementById(`fb`)
+        fb.style.visibility="hidden"
+        var ft = document.getElementById(`fl`)
+        ft.style.visibility="hidden"
+        const fil= document.getElementById('filters')
+        fil.innerHTML=''
+        var load= true
+        if(load==true){
+          ft.style.visibility="visible"
+        fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=7;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
+        <option selected value="">Genero</option>
+        <option value="Action">Ação</option>
+        <option value="Adventure">Aventura</option>
+        <option value="Fantasy">Fantasia</option>
+        <option value="Dark Fantasy">Fantasia sombria</option>
+        <option value="Isekai">Isekai</option>
+        <option value="ecchi">ecchi</option>
+        <option value="Comedy">Comedia</option>
+        <option value="Shounen">Shounen</option>
+        <option value="Slice of Life">Slice of Life</option>
+        <option value="Martial Arts">Arts Marciais</option>
+        <option value="Romance">Romance</option>
+        <option value="Xuanhuan">Xuanhuan</option>
+        <option value="science fiction">Ficção Cientifica</option>
+        <option value="mystery">Misterio</option>
+        <option value="supernatural">Sobrenatural</option>
+        <option value="Detective">Detetive</option>
+        <option value="Tragedy">Tragedia</option>
+        <option value="Harem">Harem</option>
+        <option value="Mature">Adulto</option>
+        <option value="Seinen">Seinen</option>
+    </select>
+    <select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f2" onfocus='this.size=5;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
+        <option selected value="">Categoria</option>
+        <option value="Manga">Manga</option>
+        <option value="Manhwa">Manhwa</option>
+        <option value="LightNovel">Light Novel</option>
+        <option value="WebNovel">Web Novel</option>
+    </select>`
+          fb.style.visibility="visible"
         }
     lerAPI()
     lerAPI2()
-    /* else if(pagMark==3){
-        document.getElementById(`organ`).style.display="grid";
-        document.getElementById(`carossa`).style.visibility="hidden";
-        document.getElementById(`f2`).innerHTML=`<option selected value="1">paginas</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>`
-        document.getElementById(`f3`).style.display="none";
-        document.getElementById(`f2`).style.display="block";
-        document.getElementById(`f1`).style.display="block";
-        document.getElementById(`fl`).style.display="block";
-        document.getElementById(`fb`).style.display="block";
-        document.getElementById(`f1`).innerHTML=`<option selected value="">Categoria</option>
-        <option value="Footwear%20-%20Shoes">Sapatos</option>
-        <option value="Accessories%20-%20Accessories">Acessorios</option>
-        <option value="Footwear%20-%20Flip%20Flops">Chinelos</option>
-        <option value="Accessories%20-%20Watches">Relogios</option>`
-        async function lerAPI2(){
-            let produtosAPI2 = await fetch('https://diwserver.vps.webdock.cloud/products?page=496')
-                produtosAPI2 = await produtosAPI2.json()
-                changeMP(produtosAPI2)
-            let produtosAPI3 = await fetch('https://diwserver.vps.webdock.cloud/products?page=500')
-                produtosAPI3 = await produtosAPI3.json()
-                changeCX(produtosAPI3)
-        }
-        function changeMP(produtosAPI){
-            for(let i=1;i<7;i++){
-                document.getElementById(`MPI${i}`).innerHTML=`<img src="${produtosAPI['products'][(i)]['image']}" height="110px" width="80px" class="imgMP" alt="Imagem melhores produtos SSS-Class Suicide Hunter">`
-                document.getElementById(`MPC${i}`).innerHTML=`<p class="tituloMP">${produtosAPI['products'][(i)]['title']}</p>
-                <p class="estrelasMP">
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                </p>
-                <p>R$${produtosAPI['products'][(i)]['price']}</p>`
-            }
-        }
-        function changeCX(produtosAPI){
-            for(let i=1;i<5;i++){
-                document.getElementById(`cx${i}`).innerHTML=`<img src="${produtosAPI['products'][(i)]['image']}" alt="" class="CardCAR1">
-                <p class="test1">${produtosAPI['products'][(i)]['title']}</p>`
-            }
-        }
-    lerAPI()
-    lerAPI2()
-    }
-    else{
-        document.getElementById(`organ`).style.display="grid";
-        document.getElementById(`carossa`).style.visibility="hidden";
-        document.getElementById(`f2`).style.display="none";
-        document.getElementById(`f3`).style.display="none";
-        document.getElementById(`f1`).style.display="block";
-        document.getElementById(`fl`).style.display="block";
-        document.getElementById(`fb`).style.display="block";
-        document.getElementById(`f1`).innerHTML=`<option selected value="">Categoria</option>
-        <option value="electronics">Eletronicos</option>
-        <option value="jewelery">Joalheiria</option>
-        <option value="men's clothing">Vestuario masculino</option>
-        <option value="women's clothing">Vestuario feminino</option>`
-        async function lerAPI2(){
-            let produtosAPI = await fetch('https://fakestoreapi.com/products')
-                produtosAPI = await produtosAPI.json()
-                changeMP(produtosAPI)
-                changeCX(produtosAPI)
-        }
-        function changeMP(produtosAPI){
-            for(let i=1;i<7;i++){
-                document.getElementById(`MPI${i}`).innerHTML=`<img src="${produtosAPI[(i+9)]['image']}" height="110px" width="80px" class="imgMP" alt="Imagem melhores produtos SSS-Class Suicide Hunter">`
-                document.getElementById(`MPC${i}`).innerHTML=`<p class="tituloMP">${produtosAPI[(i+9)]['title']}</p>
-                <p class="estrelasMP">
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                    <i class='fas fa-star'></i>
-                </p>
-                <p>R$${produtosAPI[(i+9)]['price']}</p>`
-            }
-        }
-        function changeCX(produtosAPI){
-            for(let i=1;i<5;i++){
-                document.getElementById(`cx${i}`).innerHTML=`<img src="${produtosAPI[(i+9+6)]['image']}" alt="" class="CardCAR1">
-                <p class="test1">${produtosAPI[(i+9+6)]['title']}</p>`
-            }
-        }
-    lerAPI()
-    lerAPI2()
-} */
 }
 function changeMP(produto) {
   const mp = document.getElementById('mpCont');
@@ -243,6 +179,7 @@ function changeCar(produtos) {
 
 
 function changeCard(produtosAPI) {
+  console.log(produtosAPI)
   const carCont = document.getElementById('CardsCont');
   carCont.innerHTML = '';
 
@@ -250,19 +187,23 @@ function changeCard(produtosAPI) {
   rowContainer.classList.add('row-container');
   carCont.appendChild(rowContainer);
 
-  for (let i = 0; i < 9; i += 3) {
+  const maxCards = 12; 
+  const filteredProducts = produtosAPI.slice(0, maxCards);
+
+  for (let i = 0; i < maxCards; i += 3) {
     const cardline = document.createElement('div');
     cardline.classList.add('row', 'mt-4');
     rowContainer.appendChild(cardline);
 
     for (let j = i; j < i + 3; j++) {
-      if (j >= produtosAPI.length) {
+      if (j >= filteredProducts.length) {
         break;
       }
 
-      const produto = produtosAPI[j+3];
+      const produto = filteredProducts[j];
       const cardIndex = j + 1;
       const stars = stCount(produto.rating.rate);
+
       const cardElement = document.createElement('div');
       cardElement.classList.add('col-4', 'card-item');
       cardElement.innerHTML = `
@@ -284,13 +225,14 @@ function changeCard(produtosAPI) {
 
       const linkElement = document.getElementById(`b${cardIndex}`);
       linkElement.addEventListener('click', function() {
-        var id = produtosAPI[cardIndex - 1].id;
+        var id = produto.id;
         id += 2;
         localStorage.setItem('d', id);
       });
     }
   }
 }
+
 
 
 
