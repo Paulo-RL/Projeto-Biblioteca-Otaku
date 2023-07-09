@@ -143,6 +143,101 @@ header{
     left: 20%;
     font-size: x-large;
 }
+.CC {
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.11);
+    width: calc(20%);
+    top: 11%;
+    height: 90vh;
+    z-index: 15;
+    right: -30%;
+    display: none;
+  }
+  .CC.active{
+    right: 0%;
+    display: block;
+  }
+  .clo{
+    height: auto;
+    width: 5%;
+  }
+  .CarinCont {
+    position: relative;
+    width: 100%;
+    flex-grow: inherit;
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.8);
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.5s;
+  }  
+  
+  .caripro {
+    height: 150px;
+    display: grid;
+    grid-template-areas:
+      "imCari ticari ticari"
+      "imCari pecari recari";
+    grid-gap: 5px;
+    border-style: solid;
+    
+  }
+  
+  .ticari {
+    grid-area: ticari;
+    position: relative;
+  }
+  
+  .pecari {
+    grid-area: pecari;
+  }
+  
+  .recari {
+    grid-area: recari;
+    max-width: calc(90%);
+    max-height: calc(40%);
+    position: relative;
+    top: 50%;
+  }
+  
+  .imCari {
+    grid-area: imCari;
+    height: 100%;
+    width: 4rem;
+  }
+  .CartFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .OI {
+    position: absolute;
+    bottom: 20px;
+    left: 51.84%;
+    right: -56.6%;
+    transform: translateX(-50%);
+    border-style: solid;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .PF {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: gold;
+  }
+  
+  
+  
 @media(min-width:2000px){
     header{
         display: flex;

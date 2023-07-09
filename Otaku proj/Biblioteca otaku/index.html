@@ -11,8 +11,14 @@
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
     <link id="mainC" href="./style.css" rel="stylesheet" crossorigin="anonymous">
     <script src="./files.js"></script>
+    <script src="./carin.js"></script>
 </head>
-<body onload="loadCard()">
+<body onload="loadCard();pageLoad()">
+    <div class="CC" id="CC">
+        <img src="./imagens/close.png" class="clo"  alt="Fechar carrinho"  onclick="togCar()">
+        <div class="CarinCont" id="CarinCont">
+        </div>
+    </div>
     <header>
         <div class="container-fluid">
             <div class="row">
@@ -29,7 +35,7 @@
                             <div class="container-fluid">
                                 <form class="d-flex" action="./Search.html" role="search" onchange="pes()">
                                     <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
-                                    <button href="./Search.html" class="btn btn-outline-success" type="button" onclick="pes(); trocarPagina()" id="searchButton">Search</button>
+                                    <button class="btn btn-outline-success" type="button" onclick="pes(); trocarPagina()" id="searchButton">Search</button>
                                 </form>                                
                             </div>
                         </nav>
@@ -39,23 +45,31 @@
                 <div class="col-12  col-lg-7 col-md-12 justify-content-end">
                     <div class="row">
                         <div class="col">
-                          <div class="navegacao">
-                            <ul class="nav">
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">Cadastro</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">Registrar</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">Minha conta</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">Rastrear pedido</a>
-                                </li>
-                            </ul>
-                            </div>
-                        </div>
+                            <nav class="navbar">
+                                <div class="container-fluid">
+                                  <button class="navbar-toggler" type="button" id="butNav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="background-color: whitesmoke;">
+                                    <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+                                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="#">Cadastro</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#">Registrar</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Minha conta</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </nav>
                     </div>
                     <div id="tes" value="2"></div>
                     <div class="row">
@@ -66,8 +80,8 @@
                           </div>
                         </div>
                         <div class="col-2">
-                            <img src="./imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras">
-                            <p class="textoCarrinho">Meu Carrinho</p>
+                            <img src="./imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
+                            <p class="textoCarrinho" onclick="togCar()">Meu Carrinho</p>
                         </div>
                     </div>
 

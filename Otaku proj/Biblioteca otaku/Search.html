@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="./Pesq.Css">
     <title>Pesquisa</title>
 </head>
-<body  id="main" onload="pes2();hide()">
+<body  id="main" onload="pes2();hide();prenCar()">
+    <div class="CC" id="CC">
+        <img src="./imagens/close.png" class="clo"  alt="Fechar carrinho"  onclick="togCar()">
+        <div class="CarinCont" id="CarinCont">
+        </div>
+    </div>
     <header>
-        <a href="./index.html">
+        <a href="javascript:void(0)" onClick="history.go(-1); return false;">
         <img class="setaVolt" src="./imagens/voltar.png" alt="seta para volar para pagina principal">
         </a>
         <Img class="Logo" src="./imagens/imagem logo.png" alt="Logo da Pagina"></Img>
@@ -18,8 +23,8 @@
             <input type="text" class="barraP" id="bPp">
             <button type="submit" class="butP" onclick="pes2()">Pesquisa</button>
         </div>
-        <img class="carCom" src="./imagens/img.carrinho de compras.png" alt="carrinho de compras">
-        <p class="carTex">Meu Carrinho</p>
+        <img class="carCom" src="./imagens/img.carrinho de compras.png" alt="carrinho de compras" onclick="togCar()">
+        <p class="carTex" onclick="togCar()">Meu Carrinho</p>
     </header>
     <div class="textoVaz" id="textoVaz">
         <p>Nenhum resultado encontrado</p>
@@ -27,5 +32,6 @@
     <div class="prods" id="Container">
     </div>
     <script src="./search.js"></script>
+    <script src="./carin.js"></script>
 </body>
 </html>

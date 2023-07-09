@@ -88,7 +88,7 @@ async function loadCard(){
         <option value="Slice of Life">Slice of Life</option>
         <option value="Sobrenatural">Sobrenatural</option>
         <option value="Super-heroi">Super-herói</option>
-        <option value="Tragedia">Tragédia</option>
+        <option value="Tragedy">Tragédia</option>
         <option value="Xuanhuan">Xuanhuan</option>
     </select>    
     <select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f2" onfocus='this.size=5;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
@@ -185,7 +185,7 @@ function changeCard(produtosAPI) {
   carCont.innerHTML = '';
 
   const rowContainer = document.createElement('div');
-  rowContainer.classList.add('row-container');
+  rowContainer.classList.add('row-container', 'ajuste2');
   carCont.appendChild(rowContainer);
 
   const maxCards = 12; 
@@ -194,6 +194,7 @@ function changeCard(produtosAPI) {
   for (let i = 0; i < maxCards; i += 3) {
     const cardline = document.createElement('div');
     cardline.classList.add('row', 'mt-4');
+    cardline.classList.add('ajuste');
     rowContainer.appendChild(cardline);
 
     for (let j = i; j < i + 3; j++) {
@@ -266,4 +267,52 @@ function stCount(rate) {
   }
 
   return stars;
+}
+
+function prenCar() {
+  var itens = JSON.parse(localStorage.getItem('DE')) || [];
+  const cari = document.getElementById('CarinCont');
+  cari.innerHTML = '';
+  console.log(itens);
+  var precoF = 0;
+  localStorage.setItem('LO', JSON.stringify(itens));
+  if (itens.length > 0) {
+    const limitedItens = itens.slice(0, 4);
+    limitedItens.forEach(itemID => {
+      fetchItemDetails(itemID)
+        .then(item => {
+          cari.innerHTML += `
+            <div class="caripro">
+              <img src="${item.image}" class="imCari">
+              <p class="ticari">${item.title}</p>
+              <p class="pacari">R$${item.price}</p>
+              <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+            </div>
+          `;
+          precoF += parseFloat(item.price);
+        });
+    });
+
+    const remainingItemIDs = itens.slice(4);
+    fetchItemPrices(remainingItemIDs)
+      .then(prices => {
+        prices.forEach(price => {
+          precoF += parseFloat(price);
+        });
+        MCI(itens);
+        cari.innerHTML += `<p class="PF">Preço final: R$${precoF.toFixed(2)}</p>`;
+      });
+  } else {
+    MCI(itens);
+  }
+}
+
+function MCI(itens) {
+  if (itens.length > 4) {
+    const oiContainer = document.createElement('div');
+    oiContainer.classList.add('OI');
+    oiContainer.innerHTML = `Outros itens: ${itens.length - 4}`;
+
+    cari.appendChild(oiContainer);
+  }
 }

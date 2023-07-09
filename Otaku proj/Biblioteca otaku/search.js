@@ -1,6 +1,8 @@
 const vaz = document.getElementById(`textoVaz`);
 const proCont = document.getElementById('Container');
     proCont.innerHTML=``
+const cari = document.getElementById('CarinCont');
+    cari.innerHTML = '';
 function buscarPorLetras(vem, produtos) {
     var letras = vem.toLowerCase();
     var resultados = produtos.filter(function(resus) {
@@ -71,9 +73,8 @@ async function pes2() {
   }
   
   function serPag(produtos, pesq) {
-    console.log(produtos)
     proCont.innerHTML = '';
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10 && i < produtos.length; i++) {
       const prode = produtos[i];
   
       const prodCont = document.createElement('div');
@@ -84,43 +85,92 @@ async function pes2() {
         <img class="prod" src="${prode.image}" alt="Produto ${i}">
         <p class="prodTit">${prode.title}</p>
         <p class="precoProd">R$${prode.price}</p>
-        <button class="prodCa">Adicionar ao Carrinho</button>
+        <button class="prodCa" id="ca${i}">Adicionar ao Carrinho</button>
         <button class="prodDe" id="pr${i}">Detalhes</button>
       `;
   
       const prodDeButton = prodCont.querySelector(`#pr${i}`);
-      prodDeButton.addEventListener('click', function() {
-        var id = produtos[i].id;
-        id -= 1;
-        console.log(id);
-        localStorage.setItem('d', id);
-        console.log("salvo");
-        trocarPagina2();
-      });
+    prodDeButton.addEventListener('click', function() {
+      var id = prode.id;
+      id -= 1;
+      localStorage.setItem('d', id);
+      console.log("salvo");
+      trocarPagina2();
+    });
+  
+      const prodCaButton = prodCont.querySelector(`#ca${i}`);
+    prodCaButton.addEventListener('click', function() {
+      const Item = prode.id;
+      localStorage.setItem('CA', JSON.stringify(Item));
+      IniciarCarin();
+      prenCar();
+    });
+      
   
       proCont.appendChild(prodCont);
     }
   
     show(pesq, produtos);
   }
+
+
+  function prenCar() {
+    var itens = JSON.parse(localStorage.getItem('DE')) || [];
+    cari.innerHTML = '';
+    console.log(itens);
+    var precoF = 0;
+    localStorage.setItem('LO', JSON.stringify(itens));
+    if (itens.length > 0) {
+      const limitedItens = itens.slice(0, 4);
+      limitedItens.forEach(itemID => {
+        fetchItemDetails(itemID)
+          .then(item => {
+            cari.innerHTML += `
+              <div class="caripro">
+                <img src="${item.image}" class="imCari">
+                <p class="ticari">${item.title}</p>
+                <p class="pacari">R$${item.price}</p>
+                <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+              </div>
+            `;
+            precoF += parseFloat(item.price);
+          });
+      });
   
+      const remainingItemIDs = itens.slice(4);
+      fetchItemPrices(remainingItemIDs)
+        .then(prices => {
+          prices.forEach(price => {
+            precoF += parseFloat(price);
+          });
+          MCI(itens);
+          cari.innerHTML += `<p class="PF">Preço final: R$${precoF.toFixed(2)}</p>`;
+        });
+    } else {
+      MCI(itens);
+    }
+  }
   
+  function MCI(itens) {
+    if (itens.length > 4) {
+      const oiContainer = document.createElement('div');
+      oiContainer.classList.add('OI');
+      oiContainer.innerHTML = `Outros itens: ${itens.length - 4}`;
   
-
-
-
-
+      cari.appendChild(oiContainer);
+    }
+  }
 
 
 function hide(){
-    var main=document.querySelector("html")
-    main.style["overflow-y"] = "hidden";
+  var main=document.querySelector("html")
+  main.style["overflow-y"] = "hidden";
 }
 document.getElementById('bPp').addEventListener("keydown", (e)=>{
-    if(e.key=="Enter"){
-        pes2()
-    }
+  if(e.key=="Enter"){
+      pes2()
+  }
 })
 function trocarPagina2() {
-  window.location.href = "./detail.html";
+window.location.href = "./detail.html";
 }

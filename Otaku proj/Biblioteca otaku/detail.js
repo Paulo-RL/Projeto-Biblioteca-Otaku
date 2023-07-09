@@ -28,7 +28,6 @@ async function detail() {
     document.getElementById("descr").textContent=descri
     document.getElementById("im").src=img
     document.getElementById("titl").textContent=ti
-    document.getElementById("descr").style.fontSize="15px"
     document.getElementById("preco").textContent=`R$${pri}`
     }
 
@@ -63,3 +62,54 @@ async function detail() {
       
         return stars;
       }
+      function pes4() {
+        localStorage.setItem('p', document.getElementById('detP').value);
+      }
+
+
+      async function prenCar() {
+        var itens = JSON.parse(localStorage.getItem('DE')) || [];
+        const cari = document.getElementById('CarinCont');
+        const PFContainer = document.getElementById('PrecoFinal');
+        const OIContainer = document.getElementById('OutrosItens');
+      
+        cari.innerHTML = '';
+        PFContainer.textContent = '';
+        OIContainer.textContent = '';
+      
+        console.log(itens);
+        var precoF = 0;
+        localStorage.setItem('LO', JSON.stringify(itens));
+      
+        if (itens.length > 0) {
+          const limitedItens = itens.slice(0, 4);
+          const limitedItemPromises = limitedItens.map(itemID => fetchItemDetails(itemID));
+          const limitedItemResults = await Promise.all(limitedItemPromises);
+      
+          limitedItemResults.forEach(item => {
+            cari.innerHTML += `
+              <div class="caripro">
+                <img src="${item.image}" class="imCari">
+                <p class="ticari">${item.title}</p>
+                <p class="pacari">R$${item.price}</p>
+                <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+              </div>
+            `;
+            precoF += parseFloat(item.price);
+          });
+      
+          if (itens.length > 4) {
+            const oiContainer = document.createElement('p');
+            oiContainer.classList.add('OI');
+            oiContainer.textContent = `Outros itens: ${itens.length - 4}`;
+      
+            OIContainer.appendChild(oiContainer);
+          }
+      
+          PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
+        }
+      
+        MCI(itens);
+      }
+      
+      
