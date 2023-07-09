@@ -65,6 +65,7 @@ async function pes2() {
       proPagButton.addEventListener('click', function() {
         p.splice(0, 10)
         serPag(p, pesq)
+        window.scrollTo({top: 0, behavior: "smooth"})
       });
     }
   }
@@ -123,13 +124,3 @@ document.getElementById('bPp').addEventListener("keydown", (e)=>{
 function trocarPagina2() {
   window.location.href = "./detail.html";
 }
-/* proCont.innerHTML=``
-    for (let i = 1; i <= pesq; i++) {
-      prode=produtos[i-1]
-      proCont.innerHTML+=`<div class="prodCont" value="1" id="prodcar1">
-      <img class="prod" src=${prode['image']} alt="Produto 1">
-        <p class="prodTit">${prode['title']}</p>
-        <p class="precoProd">${prode['price']}</p>
-        <button class="prodCa">Adicionar ao Carrinho</button>
-        <button class="prodDe" onclick="trocarPagina2()">Detalhes</button>
-  </div>` */
