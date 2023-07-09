@@ -10,26 +10,28 @@ function buscarPorLetras(vem, produtos) {
     return resultados;
 }
 async function pes2() {
-    var p = localStorage.getItem("p");
-        if (p && p !== "null") {
-          document.getElementById("bPp").value = p;
-          var vem = document.getElementById("bPp").value;
-          var base = await fetch('./base.json');
-          base = await base.json()
-          produtos= base.itens
-          var resultados = buscarPorLetras(vem, produtos);
-          show(resultados.length);
-          serPag(resultados, resultados.length);
-          localStorage.setItem("p", null);
-        } else {
-          hide();
-          var t = document.getElementById("bPp").value;
-          if (!t) {
-          } else {
-            pes3();
-          }
-        }
+  var p = localStorage.getItem("p");
+  if (p) {
+    document.getElementById("bPp").value = p;
+    var vem = document.getElementById("bPp").value;
+    var base = await fetch('./base.json');
+    base = await base.json()
+    produtos = base.itens
+    var resultados = buscarPorLetras(vem, produtos);
+    show(resultados.length);
+    serPag(resultados, resultados.length);
+    localStorage.removeItem("p");
+    p=null
+  } else {
+    hide();
+    var t = document.getElementById("bPp").value;
+    if (!t) {
+    } else {
+      pes3();
+    }
   }
+}
+
   
   async function pes3() {
       var vem = document.getElementById("bPp").value;

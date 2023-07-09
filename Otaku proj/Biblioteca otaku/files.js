@@ -226,7 +226,7 @@ function changeCard(produtosAPI) {
       const linkElement = document.getElementById(`b${cardIndex}`);
       linkElement.addEventListener('click', function() {
         var id = produto.id;
-        id += 2;
+        id -= 1;
         localStorage.setItem('d', id);
       });
     }
