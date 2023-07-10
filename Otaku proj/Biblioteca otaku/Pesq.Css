@@ -19,9 +19,9 @@ header{
     width: 99.9vw;
 }
 .Logo{
-    max-width: 6%;
+    max-width: calc(6%);
     height: fit-content;
-    position: absolute;
+    position: absolute; 
     top: 12%;
     left: 9%;
 }
@@ -148,14 +148,14 @@ header{
     color: whitesmoke;
     border-width: 0.4rem;
 }
-.CC{
-    position: absolute;
-    width: calc(20%);
-    height: 95vh;
-    z-index: 15;
-    right: -30%;
-    display: none;
-}
+    .CC{
+        position: absolute;
+        width: calc(20%);
+        height: 95vh;
+        z-index: 15;
+        right: -30%;
+        display: none;
+    }
 .CC.active{
     right: 0%;
     display: block;

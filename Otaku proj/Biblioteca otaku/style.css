@@ -13,7 +13,28 @@ html{
 .row-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.card-item {
+  margin-bottom: 20px;
+  min-width: calc(33%);
+  max-width: calc(30%);
+}
+.row-container.single-card{
+  position: relative;
+  left: 10%;
+}
+.row-container.single-card .card-item {
+  min-width: calc(140%);
+  max-width: 120%;
+}
+.ajuste {
+  width: 100%;
+  justify-content: center;
+}
+.ajuste2 {
+  justify-content: flex-start;
 }
 #mpCont {
   display: flex;
@@ -63,8 +84,8 @@ a{
     grid-row-gap: none;
 }
     #imagemLogo{
-        width:100px;
-        height:100px;
+        width:calc(7%);
+        height:calc(7%);
     }
 .estrelasCard{
   font-size: 20px
@@ -118,23 +139,6 @@ footer{
   -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color:gold;
   box-shadow: 10px;
-}
-.CardCAR1{
-  grid-column: 3;
-  height: 19rem;
-  width: auto;
-}
-.ajuste{
-  width:calc(100%);
-  justify-content: center;
-}
-.ajuste2{
-  justify-content: flex-start;
-}
-.card-item {
-  margin-bottom: 20px;
-  min-width: calc(33%);
-  max-width: calc(30%);
 }
 .CC{
   position: absolute;
@@ -219,18 +223,12 @@ footer{
     overflow-x: hidden;
     max-width: 100%;
   }
-#imagemLogo{
-    width:100px;
-    height:30px;
-}
+
 .imgMP{
     width:200px;
     height: 220px;
 }
-.card{
-    max-width: 8000%;
-  /*   max-height: 8%; */
-}
+
 #imCa{
   height: 400px;
 }
@@ -316,17 +314,12 @@ font-size: 30px;
         overflow-x: hidden;
         max-width: 100%;
       }
-    #imagemLogo{
-        width:80px;
-        height:30px;
-    }
+    
     .imgMP{
         width:80px;
         height: 100px;
     }
-    .card{
-        max-height: 1%;
-    }
+    
     .card-img-top{
         height: 410px;
     }
@@ -390,12 +383,6 @@ font-size: 30px;
   .newsletterTexto{
     font-size: 15px;
   }
-  #imagemLogo{
-
-     width:100px;
-
-     height:120px;
-}
 .estrelasCard {
   font-size: 13px;
   }
@@ -445,10 +432,6 @@ font-size: 30px;
     .email{
         line-break: anywhere;
     }
-    .card{
-        max-width: 110%;
-        max-height: 90%;
-    }
     .card .card-title {
       font-size: 15px;
     }
@@ -488,10 +471,7 @@ font-size: 30px;
   .newsletterTexto{
     font-size: 15px;
   }
-      #imagemLogo{
-        width:90px;
-        height:20px;
-    }
+      
     .welcome{
       font-size: 10px;
     }
@@ -505,9 +485,7 @@ font-size: 30px;
   .textoCarrinho{
     font-size: 8px;
   }
-  .card{
-    max-width:100%;
-  }
+  
   #imCa{
     min-height: 100px;
   }
@@ -531,14 +509,7 @@ font-size: 30px;
  grid-auto-flow: row;
 
   }
-  #imagemLogo{
-    width:70px;
-    height:20px;
-}
-.card{
-  max-width: 110%;
-  max-height: 90%;
-}
+  
 .card .card-title {
 font-size: 10px;
 }

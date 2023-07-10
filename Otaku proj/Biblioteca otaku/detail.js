@@ -110,6 +110,6 @@ async function detail() {
         }
       
         MCI(itens);
-      }
+  }
       
       

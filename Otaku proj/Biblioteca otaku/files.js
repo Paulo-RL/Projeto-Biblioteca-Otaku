@@ -70,24 +70,24 @@ async function loadCard(){
         fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=7;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
         <option selected value="">Genero</option>
         <option value="Action">Ação</option>
-        <option value="Arts Marciais">Artes Marciais</option>
+        <option value="Martial arts">Artes Marciais</option>
         <option value="Adventure">Aventura</option>
-        <option value="Comedia">Comédia</option>
+        <option value="Comedy">Comédia</option>
         <option value="Detective">Detetive</option>
         <option value="ecchi">Ecchi</option>
-        <option value="Fantasia">Fantasia</option>
+        <option value="Fantasy">Fantasia</option>
         <option value="Dark Fantasy">Fantasia Sombria</option>
-        <option value="Ficção Cientifica">Ficção Científica</option>
+        <option value="science fiction">Ficção Científica</option>
         <option value="Harem">Harem</option>
         <option value="Isekai">Isekai</option>
         <option value="Mature">Maturo</option>
-        <option value="Misterio">Mistério</option>
+        <option value="mystery">Mistério</option>
         <option value="Romance">Romance</option>
         <option value="Seinen">Seinen</option>
         <option value="Shounen">Shounen</option>
         <option value="Slice of Life">Slice of Life</option>
-        <option value="Sobrenatural">Sobrenatural</option>
-        <option value="Super-heroi">Super-herói</option>
+        <option value="Supernatural">Sobrenatural</option>
+        <option value="Superhero">Super-herói</option>
         <option value="Tragedy">Tragédia</option>
         <option value="Xuanhuan">Xuanhuan</option>
     </select>    
@@ -233,7 +233,12 @@ function changeCard(produtosAPI) {
       });
     }
   }
+
+  if (filteredProducts.length === 1) {
+    rowContainer.classList.add('single-card');
+  }
 }
+
 
 
 
