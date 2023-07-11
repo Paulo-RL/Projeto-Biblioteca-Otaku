@@ -39,7 +39,7 @@ function removerItem(itemID) {
 
 async function fetchItemDetails(itemID) {
   itemID -=1
-  const response = await fetch('./base.json');
+  const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
     base = await response.json();
       let it = await base.itens
       it = it[itemID]
@@ -48,7 +48,7 @@ async function fetchItemDetails(itemID) {
 
 async function fetchItemPrices(itemIDs) {
   try {
-    const response = await fetch('./base.json');
+    const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
     const base = await response.json();
     const prices = itemIDs.map(itemID => {
       const item = base.itens[itemID - 1];
@@ -74,5 +74,48 @@ function pageLoad() {
     localStorage.setItem('DE', JSON.stringify(savedItems));
     prenCar();
     localStorage.setItem('SA', JSON.stringify(savedItems));
+  }
+}
+
+async function prenCar() {
+  var itens = JSON.parse(localStorage.getItem('DE')) || [];
+  const cari = document.getElementById('CarinCont');
+  const PFContainer = document.getElementById('PrecoFinal');
+  const OIContainer = document.getElementById('OutrosItens');
+
+  cari.innerHTML = '';
+  PFContainer.textContent = '';
+  OIContainer.textContent = '';
+
+  console.log(itens);
+  var precoF = 0;
+  localStorage.setItem('LO', JSON.stringify(itens));
+
+  if (itens.length > 0) {
+    const limitedItens = itens.slice(0, 4);
+    const limitedItemPromises = limitedItens.map(itemID => fetchItemDetails(itemID));
+    const limitedItemResults = await Promise.all(limitedItemPromises);
+
+    limitedItemResults.forEach(item => {
+      cari.innerHTML += `
+        <div class="caripro">
+          <img src="${item.image}" class="imCari">
+          <p class="ticari">${item.title}</p>
+          <p class="pacari">R$${item.price}</p>
+          <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+        </div>
+      `;
+      precoF += parseFloat(item.price);
+    });
+
+    if (itens.length > 4) {
+      const oiContainer = document.createElement('p');
+      oiContainer.classList.add('OI');
+      oiContainer.textContent = `Outros itens: ${itens.length - 4}`;
+
+      OIContainer.appendChild(oiContainer);
+    }
+
+    PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
   }
 }

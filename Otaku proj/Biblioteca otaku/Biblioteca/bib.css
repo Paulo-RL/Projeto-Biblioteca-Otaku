@@ -1,0 +1,382 @@
+html{
+    overflow-x: hidden;
+  }
+  #CardsCont{
+    color: white;
+    border-style: none;
+    display: grid;
+  }
+  .row-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .card-item {
+    margin-bottom: 20px;
+    min-width: calc(25%);
+    max-width: calc(20%);
+  }
+  .ajuste {
+    width: 100%;
+    justify-content: center;
+  }
+  .ajuste2 {
+    justify-content: flex-start;
+  }
+  .textoCarrinho{
+      text-align: justify;
+      font-size: 12px;
+  }
+  .carrinho{
+    width: 50px;
+    height: 50px;
+  }
+  a{
+      text-decoration:none;
+  }
+  
+  .PS{
+   align-content: left;
+  }
+      #imagemLogo{
+          width:calc(7%);
+      }
+      /* fix later */
+  .estrelasCard{
+    font-size: 20px
+  }
+  header{
+      background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
+      color:aliceblue;
+  }
+  
+  .Filtro{
+      display: grid;
+      grid-auto-flow: row;
+      grid-row-gap: 20px;
+  }
+  body {
+      overflow-x: hidden;
+      max-width: 100%;
+      padding: none;
+      margin: none;
+    }
+  img {
+      max-width: 100%;
+  }
+  header{
+      max-width: 100%;
+  }
+  #imCa{
+    height: 400px;
+  }
+  .CC {
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.51);
+    width: calc(20%);
+    top: 11%;
+    height: 90vh;
+    z-index: 15;
+    right: -30%;
+    display: none;
+  }
+  
+  .CC.active {
+    right: 0%;
+    display: block;
+  }
+  
+  .clo {
+    height: auto;
+    width: 5%;
+  }
+  
+  .CarinCont {
+    position: relative;
+    width: 100%;
+    flex-grow: inherit;
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.8);
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .caripro {
+    height: 150px;
+    display: grid;
+    grid-template-areas:
+      "imCari ticari ticari"
+      "imCari pecari recari";
+    grid-gap: 5px;
+    border-style: solid;
+  }
+  
+  .ticari {
+    grid-area: ticari;
+    position: relative;
+    font-size: calc(1rem + 0.5vw);
+  }
+  
+  .pecari {
+    grid-area: pecari;
+    position: relative;
+    top: -10%;
+    font-size: calc(1rem + 0.5vw);
+  }
+  
+  .recari {
+    grid-area: recari;
+    max-width: calc(90%);
+    max-height: calc(70%);
+    position: relative;
+    top: -50%;
+    background-color: transparent;
+    border-color: blue;
+    border-width: 0.3rem;
+    color: blue;
+    font-size: calc(0.7vw);
+  }
+  
+  .recari:hover {
+    background-color: lightblue;
+    border-color: lightblue;
+    color: whitesmoke;
+    border-width: 0.4rem;
+  }
+  
+  .imCari {
+    grid-area: imCari;
+    height: 100%;
+    width: 4rem;
+  }
+  
+  .CartFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .OI {
+    position: absolute;
+    bottom: 20px;
+    left: 51.84%;
+    right: -56.6%;
+    transform: translateX(-50%);
+    border-style: solid;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .PF {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: gold;
+  }
+  
+  
+  @media(min-width:2000px){
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+  
+  .imgMP{
+      width:200px;
+      height: 220px;
+  }
+  
+  #imCa{
+    height: 400px;
+  }
+  #Cards{
+    border-style: solid;
+    border-width: 3px;
+    height: 798px;
+  }
+  .card-img-top{
+      height: 410px;
+  }
+  header{
+    align-items:self-end;
+  }
+  
+  .Filtro{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 40px;
+  }
+  .card .card-title {
+  font-size: 40px;
+  }
+  .card .card-text {
+  font-size: 30px;
+  }
+  .estrelasCard {
+  font-size: 30px;
+  }
+  .PS{
+    font-size: 20px;
+  }
+  .carrinho{
+    width: 90px;
+    height: 90px;
+  }
+  .textoCarrinho{
+    font-size: 25px;
+  }
+  }
+  
+  @media(max-width: 1200px) {
+      body {
+          overflow-x: hidden;
+          max-width: 100%;
+        }
+      
+      .card-img-top{
+          height: 410px;
+      }
+      #imCa{
+        width: auto;
+      }
+      #Cards{
+        border-style:dashed;
+        border-width: 2px;
+        height: 450px;
+      }
+      #imCa{
+        min-height: 200px;
+      }
+      #TiCr{
+        font-size: medium;
+      }
+      #Cards{
+        width: 192px;
+      }
+      .ajuste{
+        justify-content:space-between;
+      }
+  }
+  
+  @media (max-width: 912px) {
+      header{
+          align-items:self-end;
+      }
+  
+      .Filtro{
+          display: grid;
+          grid-auto-flow: row;
+          grid-row-gap: 5px;
+      }
+      .card-img-top{
+          height: 310px;
+      }
+  .estrelasCard {
+    font-size: 13px;
+    }
+  #imCa{
+    width: auto;
+  }
+  #Cards{
+    border-style:dashed;
+    border-width: 2px;
+    height: 450px;
+  }
+  #imCa{
+    min-height: 200px;
+  }
+  #TiCr{
+    font-size: medium;
+  }
+  #Cards{
+    width: 180px;
+  }
+  }
+  
+  @media (max-width: 540px) {
+      body {
+          overflow-x: hidden;
+          max-width: 100%;
+        }
+      header{
+          align-items:self-end;
+      }
+  
+      .Filtro{
+          display: grid;
+          grid-auto-flow: row;
+          grid-row-gap: 5px;
+      }
+      .card-img-top{
+          height: 250px;
+      }
+      .card .card-title {
+        font-size: 15px;
+      }
+      .card .card-text {
+        font-size: 10px;
+      }
+      .estrelasCard {
+        font-size: 10px;
+      }
+        
+      .welcome{
+        font-size: 10px;
+      }
+    .PS{
+      font-size: 10px;
+    }
+    .carrinho{
+      width: 40px;
+      height: 40px;
+    }
+    .textoCarrinho{
+      font-size: 8px;
+    }
+    
+    #imCa{
+      min-height: 100px;
+    }
+    #TiCr{
+      font-size: small;
+    }
+    #CoP{
+      font-size: x-small;
+    }
+    .card-item {
+      margin-bottom: 0px;
+      min-width: fit-content;
+    }
+    .ajuste, .ajuste2{
+      justify-content: center;
+    }
+    .CC{
+      width: calc(70%);
+    }
+  }
+  @media(max-width:320px){
+    header{
+    display: grid;
+   grid-auto-flow: row;
+  
+    }
+    
+  .card .card-title {
+  font-size: 10px;
+  }
+  .card .card-text {
+  font-size: 9px;
+  }
+  .estrelasCard {
+  font-size: 7px;
+  }
+  }
