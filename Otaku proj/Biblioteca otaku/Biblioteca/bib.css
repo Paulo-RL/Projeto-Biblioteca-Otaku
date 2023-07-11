@@ -183,6 +183,13 @@ html{
     -webkit-text-stroke-color: gold;
   }
   
+  .empty {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
   
   @media(min-width:2000px){
     body {

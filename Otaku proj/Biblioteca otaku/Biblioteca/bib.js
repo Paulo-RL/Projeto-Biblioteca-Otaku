@@ -8,44 +8,89 @@ function pes() {
   
   
   function filtro() {
-    var fi = document.getElementById('f1').value
-    var fc = document.getElementById('f2').value
-          lerAPI(fi, fc); 
-    }
-    async function lerAPI(filtro = "",filtro2 = "") {
+    var fi = document.getElementById('f1').value;
+    var fc = document.getElementById('f2').value;
+    var fe = document.getElementById('f3').value;
+    lerAPI(fi, fc, fe);
+  }  
+    async function lerAPI(filtro = "",filtro2 = "", filtro3 = "") {
       const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
       const base = await response.json();
       let produtosAPI = base.itens;
     
-      if (filtro && filtro2) {
+      if (filtro && filtro2 && filtro3) {
         produtosAPI = produtosAPI.filter(product => {
-          const { gender, displayCategories } = product;
-          const desiredGender = filtro;
-          const desiredCategory = filtro2; 
+          const { gender, displayCategories, season } = product;
+          const desiredGender = filtro.toLowerCase();
+          const desiredCategory = filtro2.toLowerCase(); 
+          const desiredSeason = filtro3.toLowerCase(); 
           return (
-            (gender && gender.includes(desiredGender)) &&
-            (displayCategories && displayCategories === desiredCategory)
+            (gender && gender.toLowerCase().includes(desiredGender)) &&
+            (displayCategories && displayCategories.toLowerCase() === desiredCategory) &&
+            (season && season.toLowerCase() === desiredSeason)
           );
         });
       }
-      else if (filtro && !filtro2) {
+      else if (filtro && filtro2 && !filtro3) {
+        produtosAPI = produtosAPI.filter(product => {
+          const { gender, displayCategories} = product;
+          const desiredGender = filtro.toLowerCase();
+          const desiredCategory = filtro2.toLowerCase(); 
+          return (
+            (gender && gender.toLowerCase().includes(desiredGender)) &&
+            (displayCategories && displayCategories.toLowerCase() === desiredCategory)
+          );
+        });
+      }
+      else if (filtro && !filtro2 && filtro3) {
+        produtosAPI = produtosAPI.filter(product => {
+          const { gender, season } = product;
+          const desiredGender = filtro.toLowerCase();
+          const desiredSeason = filtro3.toLowerCase(); 
+          return (
+            (gender && gender.toLowerCase().includes(desiredGender)) &&
+            (season && season.toLowerCase() === desiredSeason)
+          );
+        });
+      }
+      else if (!filtro && filtro2 && filtro3) {
+        produtosAPI = produtosAPI.filter(product => {
+          const {displayCategories, season } = product;
+          const desiredCategory = filtro2.toLowerCase(); 
+          const desiredSeason = filtro3.toLowerCase(); 
+          return (
+            (displayCategories && displayCategories.toLowerCase() === desiredCategory) &&
+            (season && season.toLowerCase() === desiredSeason)
+          );
+        });
+      }
+      else if (filtro && !filtro2 && !filtro3) {
         produtosAPI = produtosAPI.filter(product => {
           const { gender} = product;
-          const desiredGender = filtro; 
+          const desiredGender = filtro.toLowerCase(); 
           return (
-            (gender && gender.includes(desiredGender))
+            (gender && gender.toLowerCase().includes(desiredGender))
           );
         });
       }
-      else if (!filtro && filtro2) {
+      else if (!filtro && filtro2 && !filtro3) {
         produtosAPI = produtosAPI.filter(product => {
           const { displayCategories } = product;
-          const desiredCategory = filtro2; 
+          const desiredCategory = filtro2.toLowerCase(); 
           return (
-            (displayCategories && displayCategories === desiredCategory)
+            (displayCategories && displayCategories.toLowerCase() === desiredCategory)
           );
         });
       }
+      else if(!filtro && !filtro2 && filtro3){
+        produtosAPI = produtosAPI.filter(product => {
+          const { season } = product;
+          const desiredSeason = filtro3.toLowerCase(); 
+          return (
+            (season && season.toLowerCase() === desiredSeason)
+          );
+        });
+      }      
       changeCard(produtosAPI);
     }
   async function loadCard(){
@@ -55,8 +100,6 @@ function pes() {
           ft.style.visibility="hidden"
           const fil= document.getElementById('filters')
           fil.innerHTML=''
-          var load= true
-          if(load==true){
             ft.style.visibility="visible"
           fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=7;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
           <option selected value="">Genero</option>
@@ -64,12 +107,15 @@ function pes() {
           <option value="Martial arts">Artes Marciais</option>
           <option value="Adventure">Aventura</option>
           <option value="Comedy">Comédia</option>
+          <option value="Comedy drama">Comédia dramática</option>
           <option value="Detective">Detetive</option>
           <option value="ecchi">Ecchi</option>
           <option value="Fantasy">Fantasia</option>
+          <option value="Science fantasy">Fantasia Científica</option>
           <option value="Dark Fantasy">Fantasia Sombria</option>
           <option value="science fiction">Ficção Científica</option>
           <option value="Harem">Harem</option>
+          <option value="Horror">Horror</option>
           <option value="Isekai">Isekai</option>
           <option value="Mature">Maturo</option>
           <option value="mystery">Mistério</option>
@@ -88,22 +134,34 @@ function pes() {
           <option value="Manhwa">Manhwa</option>
           <option value="LightNovel">Light Novel</option>
           <option value="WebNovel">Web Novel</option>
+      </select>
+      <select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f3" onfocus='this.size=5;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
+          <option selected value="">Estação/Temporada</option>
+          <option value="Spring">Primavera</option>
+          <option value="Summer">Verão</option>
+          <option value="Autumn">Outono</option>
+          <option value="Winter">Inverno</option>
       </select>`
             fb.style.visibility="visible"
-          }
       lerAPI()
   }
   
   
   
   function changeCard(produtosAPI) {
-    console.log(produtosAPI)
+    console.log(produtosAPI);
     const carCont = document.getElementById('CardsCont');
     carCont.innerHTML = '';
   
     const rowContainer = document.createElement('div');
     rowContainer.classList.add('row-container', 'ajuste2');
     carCont.appendChild(rowContainer);
+  
+    const emptyCont = document.createElement('div');
+    emptyCont.classList.add('empty');
+  
+    var main = document.querySelector('html');
+    main.style['overflow-y'] = 'visible';
   
     for (let i = 0; i < produtosAPI.length; i += 4) {
       const cardline = document.createElement('div');
@@ -140,14 +198,20 @@ function pes() {
         cardline.appendChild(cardElement);
   
         const linkElement = document.getElementById(`b${cardIndex}`);
-        linkElement.addEventListener('click', function() {
+        linkElement.addEventListener('click', function () {
           var id = produto.id;
           id -= 1;
           localStorage.setItem('d', id);
         });
       }
     }
-  }
+    if (produtosAPI.length === 0) {
+      carCont.appendChild(emptyCont);
+      emptyCont.innerHTML = `Nenhum resultado encontrado`;
+      main.style['overflow-y'] = 'hidden';
+      console.log('chegou aqui?');
+    }
+  }  
   
   function stCount(rate) {
     let stars = '';

@@ -21,29 +21,29 @@ function filtro() {
     if (filtro && filtro2) {
       produtosAPI = produtosAPI.filter(product => {
         const { gender, displayCategories } = product;
-        const desiredGender = filtro;
-        const desiredCategory = filtro2; 
+        const desiredGender = filtro.toLowerCase();
+        const desiredCategory = filtro2.toLowerCase(); 
         return (
-          (gender && gender.includes(desiredGender)) &&
-          (displayCategories && displayCategories === desiredCategory)
+          (gender && gender.toLowerCase().includes(desiredGender)) &&
+          (displayCategories && displayCategories.toLowerCase() === desiredCategory)
         );
       });
     }
     else if (filtro && !filtro2) {
       produtosAPI = produtosAPI.filter(product => {
         const { gender} = product;
-        const desiredGender = filtro; 
+        const desiredGender = filtro.toLowerCase(); 
         return (
-          (gender && gender.includes(desiredGender))
+          (gender && gender.toLowerCase().includes(desiredGender))
         );
       });
     }
     else if (!filtro && filtro2) {
       produtosAPI = produtosAPI.filter(product => {
         const { displayCategories } = product;
-        const desiredCategory = filtro2; 
+        const desiredCategory = filtro2.toLowerCase(); 
         return (
-          (displayCategories && displayCategories === desiredCategory)
+          (displayCategories && displayCategories.toLowerCase() === desiredCategory)
         );
       });
     }
@@ -73,12 +73,15 @@ async function loadCard(){
         <option value="Martial arts">Artes Marciais</option>
         <option value="Adventure">Aventura</option>
         <option value="Comedy">Comédia</option>
+        <option value="Comedy drama">Comédia dramática</option>
         <option value="Detective">Detetive</option>
         <option value="ecchi">Ecchi</option>
         <option value="Fantasy">Fantasia</option>
+        <option value="Science fantasy">Fantasia Científica</option>
         <option value="Dark Fantasy">Fantasia Sombria</option>
         <option value="science fiction">Ficção Científica</option>
         <option value="Harem">Harem</option>
+        <option value="Horror">Horror</option>
         <option value="Isekai">Isekai</option>
         <option value="Mature">Maturo</option>
         <option value="mystery">Mistério</option>
