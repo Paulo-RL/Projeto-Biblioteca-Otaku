@@ -153,14 +153,17 @@ header{
     right: -30%;
     display: none;
   }
-  .CC.active{
+  
+  .CC.active {
     right: 0%;
     display: block;
   }
-  .clo{
+  
+  .clo {
     height: auto;
     width: 5%;
   }
+  
   .CarinCont {
     position: relative;
     width: 100%;
@@ -170,7 +173,7 @@ header{
     flex-direction: column;
     overflow: hidden;
     transition: 0.5s;
-  }  
+  }
   
   .caripro {
     height: 150px;
@@ -180,24 +183,37 @@ header{
       "imCari pecari recari";
     grid-gap: 5px;
     border-style: solid;
-    
   }
   
   .ticari {
     grid-area: ticari;
     position: relative;
+    font-size: calc(1rem + 0.5vw);
   }
   
   .pecari {
     grid-area: pecari;
+    font-size: calc(1rem + 0.5vw);
   }
   
   .recari {
     grid-area: recari;
     max-width: calc(90%);
-    max-height: calc(40%);
+    max-height: calc(70%);
     position: relative;
-    top: 50%;
+    top: -50%;
+    background-color: transparent;
+    border-color: blue;
+    border-width: 0.3rem;
+    color: blue;
+    font-size: calc(0.7vw);
+  }
+  
+  .recari:hover {
+    background-color: lightblue;
+    border-color: lightblue;
+    color: whitesmoke;
+    border-width: 0.4rem;
   }
   
   .imCari {
@@ -205,6 +221,7 @@ header{
     height: 100%;
     width: 4rem;
   }
+  
   .CartFooter {
     position: absolute;
     bottom: 0;
@@ -235,7 +252,6 @@ header{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: gold;
   }
-  
   
   
 @media(min-width:2000px){

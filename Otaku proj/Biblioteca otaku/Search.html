@@ -8,12 +8,16 @@
     <title>Biblioteca Otaku</title>
     <link rel="icon" type="image/png" href="./imagens/imagem logo.png"/>
 </head>
-<body  id="main" onload="pes2();hide();prenCar()">
+<body  id="main" onload="pes2();hide();pageLoad()">
     <div class="CC" id="CC">
-        <img src="./imagens/close.png" class="clo"  alt="Fechar carrinho"  onclick="togCar()">
+        <img src="./imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
         <div class="CarinCont" id="CarinCont">
         </div>
-    </div>
+        <div class="CartFooter">
+          <p class="PF" id="PrecoFinal"></p>
+          <div class="OI" id="OutrosItens"></div>
+        </div>
+      </div>
     <header>
         <a href="javascript:void(0)" onClick="history.go(-1); return false;">
         <img class="setaVolt" src="./imagens/voltar.png" alt="seta para volar para pagina principal">

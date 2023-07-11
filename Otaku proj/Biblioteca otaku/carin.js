@@ -1,15 +1,19 @@
 function IniciarCarin(remover = "") {
   const existingItems = localStorage.getItem('DE');
+  const preItems = localStorage.getItem('SA')
   let cartItems = [];
+  let remItems = [];
   var newItemID;
   if (existingItems) {
     cartItems = JSON.parse(existingItems);
+    remItems = JSON.parse(preItems)
   }
 
   if (remover) {
     const indexToRemove = cartItems.findIndex(item => item === remover);
     if (indexToRemove !== -1) {
       cartItems.splice(indexToRemove, 1);
+      remItems.splice(indexToRemove, 1);
     }
   }
   else{
@@ -19,8 +23,10 @@ function IniciarCarin(remover = "") {
   }
 }
   const cartItemsJSON = JSON.stringify(cartItems);
+  const preItemsJSON = JSON.stringify(remItems)
 
   localStorage.setItem('DE', cartItemsJSON);
+  localStorage.setItem('SA', preItemsJSON);
   console.log(cartItems)
 }
 
@@ -59,8 +65,14 @@ function togCar(){
 }
 
 function pageLoad() {
-  const savedItems = JSON.parse(localStorage.getItem('LO')) || [];
-  localStorage.setItem('DE', JSON.stringify(savedItems));
-  IniciarCarin();
-  prenCar();
+  let savedItems = JSON.parse(localStorage.getItem('LO')) || [];
+  if (savedItems.length === 0) {
+    savedItems = JSON.parse(localStorage.getItem('SA')) || [];
+    localStorage.setItem('DE', JSON.stringify(savedItems));
+    prenCar();
+  } else {
+    localStorage.setItem('DE', JSON.stringify(savedItems));
+    prenCar();
+    localStorage.setItem('SA', JSON.stringify(savedItems));
+  }
 }

@@ -26,8 +26,8 @@ html{
   left: 10%;
 }
 .row-container.single-card .card-item {
-  min-width: calc(140%);
-  max-width: 120%;
+  min-width: calc(100%);
+  max-width: 100%;
 }
 .ajuste {
   width: 100%;
@@ -140,22 +140,27 @@ footer{
   -webkit-text-stroke-color:gold;
   box-shadow: 10px;
 }
-.CC{
+.CC {
   position: absolute;
+  background-color: rgba(0, 255, 255, 0.11);
   width: calc(20%);
-  height: 95vh;
+  top: 11%;
+  height: 90vh;
   z-index: 15;
   right: -30%;
   display: none;
 }
-.CC.active{
+
+.CC.active {
   right: 0%;
   display: block;
 }
-.clo{
+
+.clo {
   height: auto;
   width: 5%;
 }
+
 .CarinCont {
   position: relative;
   width: 100%;
@@ -175,24 +180,37 @@ footer{
     "imCari pecari recari";
   grid-gap: 5px;
   border-style: solid;
-  
 }
 
 .ticari {
   grid-area: ticari;
   position: relative;
+  font-size: calc(1rem + 0.5vw);
 }
 
 .pecari {
   grid-area: pecari;
+  font-size: calc(1rem + 0.5vw);
 }
 
 .recari {
   grid-area: recari;
   max-width: calc(90%);
-  max-height: calc(40%);
+  max-height: calc(70%);
   position: relative;
-  top: 50%;
+  top: -50%;
+  background-color: transparent;
+  border-color: blue;
+  border-width: 0.3rem;
+  color: blue;
+  font-size: calc(0.7vw);
+}
+
+.recari:hover {
+  background-color: lightblue;
+  border-color: lightblue;
+  color: whitesmoke;
+  border-width: 0.4rem;
 }
 
 .imCari {
@@ -200,24 +218,39 @@ footer{
   height: 100%;
   width: 4rem;
 }
+
+.CartFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
 .OI {
+  position: absolute;
+  bottom: 20px;
+  left: 51.84%;
+  right: -56.6%;
+  transform: translateX(-50%);
   border-style: solid;
   color: black;
   cursor: pointer;
   text-align: center;
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  
 }
 
-.PF{
-  margin-top: 100px;
+.PF {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
   font-weight: 800;
   -webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: gold;
+  -webkit-text-stroke-color: gold;
 }
+
+
 @media(min-width:2000px){
   body {
     overflow-x: hidden;
@@ -501,6 +534,9 @@ font-size: 30px;
   }
   .ajuste, .ajuste2{
     justify-content: center;
+  }
+  .CC{
+    width: calc(70%);
   }
 }
 @media(max-width:320px){

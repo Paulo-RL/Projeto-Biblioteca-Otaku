@@ -48,12 +48,13 @@ async function pes2() {
     var pesq2 = pesq;
     if (pesq2 == 0) {
       vaz.setAttribute("style", "visibility: visible;");
-    } else if (pesq2 > 15) {
+    } else if (pesq2 > 10) {
       vaz.setAttribute("style", "visibility: hidden;");
       var main = document.querySelector("html");
       main.style["overflow-y"] = "visible";
       const proPagButton = document.createElement('button');
       proPagButton.id = 'ProPag';
+      proPagButton.classList.add('PP')
       proPagButton.textContent = 'Próxima página';
       proCont.appendChild(proPagButton);
     } else {
@@ -66,6 +67,7 @@ async function pes2() {
     if (proPagButton) {
       proPagButton.addEventListener('click', function() {
         p.splice(0, 10)
+        proCont.removeChild(proPagButton);
         serPag(p, pesq)
         window.scrollTo({top: 0, behavior: "smooth"})
       });
@@ -114,52 +116,48 @@ async function pes2() {
   }
 
 
-  function prenCar() {
+  async function prenCar() {
     var itens = JSON.parse(localStorage.getItem('DE')) || [];
+    const cari = document.getElementById('CarinCont');
+    const PFContainer = document.getElementById('PrecoFinal');
+    const OIContainer = document.getElementById('OutrosItens');
+  
     cari.innerHTML = '';
+    PFContainer.textContent = '';
+    OIContainer.textContent = '';
+  
     console.log(itens);
     var precoF = 0;
     localStorage.setItem('LO', JSON.stringify(itens));
+  
     if (itens.length > 0) {
       const limitedItens = itens.slice(0, 4);
-      limitedItens.forEach(itemID => {
-        fetchItemDetails(itemID)
-          .then(item => {
-            cari.innerHTML += `
-              <div class="caripro">
-                <img src="${item.image}" class="imCari">
-                <p class="ticari">${item.title}</p>
-                <p class="pacari">R$${item.price}</p>
-                <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
-              </div>
-            `;
-            precoF += parseFloat(item.price);
-          });
+      const limitedItemPromises = limitedItens.map(itemID => fetchItemDetails(itemID));
+      const limitedItemResults = await Promise.all(limitedItemPromises);
+  
+      limitedItemResults.forEach(item => {
+        cari.innerHTML += `
+          <div class="caripro">
+            <img src="${item.image}" class="imCari">
+            <p class="ticari">${item.title}</p>
+            <p class="pacari">R$${item.price}</p>
+            <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+          </div>
+        `;
+        precoF += parseFloat(item.price);
       });
   
-      const remainingItemIDs = itens.slice(4);
-      fetchItemPrices(remainingItemIDs)
-        .then(prices => {
-          prices.forEach(price => {
-            precoF += parseFloat(price);
-          });
-          MCI(itens);
-          cari.innerHTML += `<p class="PF">Preço final: R$${precoF.toFixed(2)}</p>`;
-        });
-    } else {
-      MCI(itens);
-    }
-  }
+      if (itens.length > 4) {
+        const oiContainer = document.createElement('p');
+        oiContainer.classList.add('OI');
+        oiContainer.textContent = `Outros itens: ${itens.length - 4}`;
   
-  function MCI(itens) {
-    if (itens.length > 4) {
-      const oiContainer = document.createElement('div');
-      oiContainer.classList.add('OI');
-      oiContainer.innerHTML = `Outros itens: ${itens.length - 4}`;
+        OIContainer.appendChild(oiContainer);
+      }
   
-      cari.appendChild(oiContainer);
+      PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
     }
-  }
+}
 
 
 function hide(){

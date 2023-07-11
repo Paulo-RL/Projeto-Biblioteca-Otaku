@@ -29,6 +29,14 @@ async function detail() {
     document.getElementById("im").src=img
     document.getElementById("titl").textContent=ti
     document.getElementById("preco").textContent=`R$${pri}`
+    const CAR = document.querySelector(`#Carin`);
+    CAR.addEventListener('click', function() {
+      const Item = prod.id;
+      localStorage.setItem('CA', JSON.stringify(Item));
+      IniciarCarin();
+      prenCar();
+      alert("Produto adicionado com sucesso!")
+    });
     }
 
 
@@ -108,8 +116,6 @@ async function detail() {
       
           PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
         }
-      
-        MCI(itens);
   }
       
       

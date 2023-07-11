@@ -274,50 +274,45 @@ function stCount(rate) {
   return stars;
 }
 
-function prenCar() {
+async function prenCar() {
   var itens = JSON.parse(localStorage.getItem('DE')) || [];
   const cari = document.getElementById('CarinCont');
+  const PFContainer = document.getElementById('PrecoFinal');
+  const OIContainer = document.getElementById('OutrosItens');
+
   cari.innerHTML = '';
+  PFContainer.textContent = '';
+  OIContainer.textContent = '';
+
   console.log(itens);
   var precoF = 0;
   localStorage.setItem('LO', JSON.stringify(itens));
+
   if (itens.length > 0) {
     const limitedItens = itens.slice(0, 4);
-    limitedItens.forEach(itemID => {
-      fetchItemDetails(itemID)
-        .then(item => {
-          cari.innerHTML += `
-            <div class="caripro">
-              <img src="${item.image}" class="imCari">
-              <p class="ticari">${item.title}</p>
-              <p class="pacari">R$${item.price}</p>
-              <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
-            </div>
-          `;
-          precoF += parseFloat(item.price);
-        });
+    const limitedItemPromises = limitedItens.map(itemID => fetchItemDetails(itemID));
+    const limitedItemResults = await Promise.all(limitedItemPromises);
+
+    limitedItemResults.forEach(item => {
+      cari.innerHTML += `
+        <div class="caripro">
+          <img src="${item.image}" class="imCari">
+          <p class="ticari">${item.title}</p>
+          <p class="pacari">R$${item.price}</p>
+          <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+        </div>
+      `;
+      precoF += parseFloat(item.price);
     });
 
-    const remainingItemIDs = itens.slice(4);
-    fetchItemPrices(remainingItemIDs)
-      .then(prices => {
-        prices.forEach(price => {
-          precoF += parseFloat(price);
-        });
-        MCI(itens);
-        cari.innerHTML += `<p class="PF">Preço final: R$${precoF.toFixed(2)}</p>`;
-      });
-  } else {
-    MCI(itens);
-  }
-}
+    if (itens.length > 4) {
+      const oiContainer = document.createElement('p');
+      oiContainer.classList.add('OI');
+      oiContainer.textContent = `Outros itens: ${itens.length - 4}`;
 
-function MCI(itens) {
-  if (itens.length > 4) {
-    const oiContainer = document.createElement('div');
-    oiContainer.classList.add('OI');
-    oiContainer.innerHTML = `Outros itens: ${itens.length - 4}`;
+      OIContainer.appendChild(oiContainer);
+    }
 
-    cari.appendChild(oiContainer);
+    PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
   }
 }
