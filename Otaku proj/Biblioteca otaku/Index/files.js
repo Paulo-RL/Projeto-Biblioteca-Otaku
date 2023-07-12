@@ -2,11 +2,6 @@ function pes() {
   localStorage.setItem('p', document.getElementById('impPT').value);
 }
 
-function trocarPagina() {
-  window.location.href = "/Otaku proj/Biblioteca otaku/pesquisa/Search.html";
-}
-
-
 function filtro() {
   var fi = document.getElementById('f1').value
   var fc = document.getElementById('f2').value
@@ -110,35 +105,47 @@ function changeMP(produto) {
   const mp = document.getElementById('mpCont');
   mp.innerHTML = '';
 
+  let lowestID = Infinity;
+  for (let i = 12; i < 18; i++) {
+    if (produto[i].id < lowestID) {
+      lowestID = produto[i].id;
+    }
+  }
+
   for (let i = 0; i < 6; i++) {
-    const index = i + 12;
-    const stars = stCount(produto[index].rating.rate)
+    const itemID = lowestID + i;
+    const selectedItem = produto.find(item => item.id === itemID);
+    const stars = stCount(selectedItem.rating.rate);
+
     const mpiHTML = `
       <div class="col-3 col-md-5 col-lg-3 border-bottom border-danger" id="MPI${i + 1}">
-        <img src="${produto[index].image}" height="110px" width="80px" class="imgMP" alt="Imagem melhores produtos ${produto[index].title}">
+        <img src="${selectedItem.image}" height="110px" width="80px" class="imgMP" alt="Imagem melhores produtos ${selectedItem.title}">
       </div>
       <div class="col-9 col-md-7 col-lg-9 border-bottom border-danger" id="MPC${i + 1}">
-        <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="g${i + 1}">
-          <p class="tituloMP">${produto[index].title}</p>
+        <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="g${selectedItem.id}">
+          <p class="tituloMP">${selectedItem.title}</p>
         </a>
         <p class="estrelasMP">
           ${stars}
         </p>
-        <p>R$${produto[index].price}</p>
+        <p>R$${parseFloat(selectedItem.price).toFixed(2)}</p>
       </div>
     `;
 
     mp.insertAdjacentHTML('beforeend', mpiHTML);
 
-    const linkElement2 = document.getElementById(`g${i + 1}`);
-    linkElement2.addEventListener("click", (function(id) {
+    const linkElement2 = document.getElementById(`g${selectedItem.id}`);
+    linkElement2.addEventListener("click", function() {
+      let ic = selectedItem.id
       return function() {
-        id-=1
-        localStorage.setItem('d', id);
+        localStorage.setItem('d', ic);
       };
-    })(produto[index].id));
+    }(selectedItem.id + 1));
   }
 }
+
+
+
 function changeCar(produtos) {
   const ind = document.getElementById('cInd');
   ind.innerHTML = '<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>';
@@ -171,7 +178,6 @@ function changeCar(produtos) {
     linkElement.addEventListener('click', (function(index) {
       return function() {
         var id = produtos[index].id;
-        id-=1
         localStorage.setItem('d', id);
       };
     })(i));
@@ -218,7 +224,7 @@ function changeCard(produtosAPI) {
             <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="b${cardIndex}">
               <h5 class="card-title" id="TiCr">${produto.title}</h5>
             </a>
-            <p class="card-text">R$${produto.price}</p>
+            <p class="card-text">R$${parseFloat(produto.price).toFixed(2)}</p>
             <p class="estrelasCard">
               ${stars}
             </p>
@@ -231,7 +237,6 @@ function changeCard(produtosAPI) {
       const linkElement = document.getElementById(`b${cardIndex}`);
       linkElement.addEventListener('click', function() {
         var id = produto.id;
-        id -= 1;
         localStorage.setItem('d', id);
       });
     }

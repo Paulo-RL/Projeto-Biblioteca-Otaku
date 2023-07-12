@@ -116,6 +116,9 @@ html{
   .ticari {
     grid-area: ticari;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: calc(1rem + 0.5vw);
   }
   

@@ -2,11 +2,6 @@ function pes() {
     localStorage.setItem('p', document.getElementById('impPT').value);
   }
   
-  function trocarPagina() {
-    window.location.href = "/Otaku proj/Biblioteca otaku/pesquisa/Search.html";
-  }
-  
-  
   function filtro() {
     var fi = document.getElementById('f1').value;
     var fc = document.getElementById('f2').value;
@@ -187,7 +182,7 @@ function pes() {
               <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="b${cardIndex}">
                 <h5 class="card-title" id="TiCr">${produto.title}</h5>
               </a>
-              <p class="card-text">R$${produto.price}</p>
+              <p class="card-text">R$${parseFloat(produto.price).toFixed(2)}</p>
               <p class="estrelasCard">
                 ${stars}
               </p>
@@ -200,7 +195,6 @@ function pes() {
         const linkElement = document.getElementById(`b${cardIndex}`);
         linkElement.addEventListener('click', function () {
           var id = produto.id;
-          id -= 1;
           localStorage.setItem('d', id);
         });
       }

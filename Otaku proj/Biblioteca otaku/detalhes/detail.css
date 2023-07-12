@@ -11,8 +11,8 @@ header{
     max-height: 15%;
 }
 .Logo{
-    max-width: 90%;
-    max-height: 90%;
+    max-width: calc(6%);
+    height: fit-content;
     position: absolute;
     top: 8%;
     left: 7%;
@@ -188,6 +188,9 @@ header{
   .ticari {
     grid-area: ticari;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: calc(1rem + 0.5vw);
   }
   
@@ -265,8 +268,8 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(3.5%);
+        height: fit-content;
         position: absolute;
         top: 20%;
         left: 7%;
@@ -342,7 +345,7 @@ header{
     }
     .ImgP{
         max-width: fit-content;
-        min-height: 30rem;
+        min-height: 25rem;
         max-height: 22rem;
         position: absolute;
         left: 1%;
@@ -403,8 +406,8 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(6%);
+        height: fit-content;
         position: absolute;
         top: 20%;
         left: 7%;
@@ -510,8 +513,8 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(8%);
+        height: fit-content;
         position: absolute;
         top: 20%;
         left: 7%;
@@ -656,8 +659,8 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(12%);
+        height: fit-content;
         position: absolute;
         top: 20%;
         left: 7%;
@@ -804,8 +807,8 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(11%);
+        height: fit-content;
         position: absolute;
         top: 20%;
         left: 7%;
@@ -950,10 +953,10 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(12%);
+        height: fit-content;
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 9%;
     }
     .setaVolt{
@@ -1104,10 +1107,10 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 70%;
-        max-height: 70%;
+        max-width: calc(13%);
+        height: fit-content;
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 9%;
     }
     .setaVolt{
@@ -1227,10 +1230,10 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 60%;
-        max-height: 60%;
+        max-width: calc(10%);
+        height: fit-content;
         position: absolute;
-        top: 20%;
+        top:33%;
         left: 9%;
     }
     .setaVolt{
@@ -1352,11 +1355,11 @@ header{
         max-height: 13%;
     }
     .Logo{
-        max-width: 20%;
-        max-height: 20%;
+        max-width: calc(11%);
+        height: fit-content;
         position: absolute;
-        top: 40%;
-        left: 13%;
+        top: 30%;
+        left: 8%;
     }
     .setaVolt{
         max-width: 55%;
