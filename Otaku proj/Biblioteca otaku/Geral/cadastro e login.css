@@ -1,0 +1,52 @@
+.LCC{
+    position: fixed;
+    z-index: 500;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    visibility: hidden;
+}
+.LCC.active{
+    visibility: visible;
+}
+#cl{
+    position: fixed;
+    width: 2vw;
+}
+.LogCad{
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    width: calc(25vw + 100px);
+    height: calc(25% * 3);
+}
+.LCT{
+    align-self: center;
+    text-align: center;
+    font-size: calc(1rem + 0.9vw);
+}
+.FLC{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.IEM, .IPS, .INM, .ITL{
+    align-self:center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.IEML, .IPSL{
+    align-self:center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}

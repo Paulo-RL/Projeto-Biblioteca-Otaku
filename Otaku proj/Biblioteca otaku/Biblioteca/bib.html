@@ -12,8 +12,10 @@
     <link href="./bib.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/carin.css">
     <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/headers and pagers.css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/cadastro e login.css">
     <script src="./bib.js"></script>
     <script src="/Otaku proj/Biblioteca otaku/Geral/carin.js"></script>
+    <script src="/Otaku proj/Biblioteca otaku/Geral/cadastro e login.js"></script>
 </head>
 <body onload="loadCard();pageLoad()">
     <div class="CC" id="CC">
@@ -25,6 +27,11 @@
           <div class="OI" id="OutrosItens"></div>
         </div>
       </div>
+    <div class="LCC" id="LCC">
+        <div class="LogCad" id="LC">
+            
+        </div>
+    </div>
     <header class="Pager1">
         <div class="container-fluid">
             <div class="row">
@@ -65,10 +72,10 @@
                                     <div class="offcanvas-body">
                                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                         <li class="nav-item">
-                                          <a class="nav-link active" aria-current="page" href="#">Cadastro</a>
+                                            <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close"  onclick="OpenCad()">Cadastro</button>
                                         </li>
                                         <li class="nav-item">
-                                          <a class="nav-link" href="#">Registrar</a>
+                                            <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close"  onclick="OpenLog()">Login</button>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Minha conta</a>
