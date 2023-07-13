@@ -1,59 +1,6 @@
 html{
     overflow: hidden;
 }
-header{
-    display: flex;
-    background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-    position: absolute;
-    top:-1%;
-    right: 0%;
-    left: 0%;
-    max-height: 15%;
-}
-.Logo{
-    max-width: calc(6%);
-    height: fit-content;
-    position: absolute;
-    top: 8%;
-    left: 7%;
-}
-.BrPesq{
-    display: flex;
-    top: 5%;
-    left: 20%;
-    align-items:center;
-    font-size: large;
-}
-.textPq{
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    font-size: x-large;
-}
-.barraP{
-    max-height: 2rem;
-    min-width: 150%;
-    position:relative;
-    top: 0%;
-}
-.butP{
-    min-height: 1.4rem;
-}
-.setaVolt{
-    max-width: 90%;
-    max-height: 90%;
-}
-.carCom{
-    position: absolute;
-    right: 5%;
-    top: 10%;
-    max-width: 75%;
-    max-height: 75%;
-}
-.carTex{
-    position: absolute;
-    right: 5%;
-    top: 72%;
-}
 .ImgP{
     max-width: 15rem;
     min-height: 22rem;
@@ -143,165 +90,10 @@ header{
     left: 20%;
     font-size: x-large;
 }
-.CC {
-    position: absolute;
-    background-color: rgba(0, 255, 255, 0.11);
-    width: calc(20%);
-    top: 11%;
+.CC{
     height: 90vh;
-    z-index: 15;
-    right: -30%;
-    display: none;
-  }
-  
-  .CC.active {
-    right: 0%;
-    display: block;
-  }
-  
-  .clo {
-    height: auto;
-    width: 5%;
-  }
-  
-  .CarinCont {
-    position: relative;
-    width: 100%;
-    flex-grow: inherit;
-    display: flex;
-    background-color: rgba(245, 245, 245, 0.8);
-    flex-direction: column;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-  
-  .caripro {
-    height: 150px;
-    display: grid;
-    grid-template-areas:
-      "imCari ticari ticari"
-      "imCari pecari recari";
-    grid-gap: 5px;
-    border-style: solid;
-  }
-  
-  .ticari {
-    grid-area: ticari;
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: calc(1rem + 0.5vw);
-  }
-  
-  .pecari {
-    grid-area: pecari;
-    font-size: calc(1rem + 0.5vw);
-  }
-  
-  .recari {
-    grid-area: recari;
-    max-width: calc(90%);
-    max-height: calc(70%);
-    position: relative;
-    top: -50%;
-    background-color: transparent;
-    border-color: blue;
-    border-width: 0.3rem;
-    color: blue;
-    font-size: calc(0.7vw);
-  }
-  
-  .recari:hover {
-    background-color: lightblue;
-    border-color: lightblue;
-    color: whitesmoke;
-    border-width: 0.4rem;
-  }
-  
-  .imCari {
-    grid-area: imCari;
-    height: 100%;
-    width: 4rem;
-  }
-  
-  .CartFooter {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  .OI {
-    position: absolute;
-    bottom: 20px;
-    left: 51.84%;
-    right: -56.6%;
-    transform: translateX(-50%);
-    border-style: solid;
-    color: black;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .PF {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    font-weight: 800;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: gold;
-  }
-  
-  
+}
 @media(min-width:2000px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(3.5%);
-        height: fit-content;
-        position: absolute;
-        top: 20%;
-        left: 7%;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: 50px;
-    }
-    .barraP{
-        min-height: 2rem;
-        min-width: 150%;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        min-height: 2.5rem;
-        font-size: x-large;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 10%;
-        max-width: 70%;
-        max-height: 70%;
-    }
-    .carTex{
-        position: absolute;
-        font-size: XX-large;
-        right: 4%;
-        top: 64%;
-    }
     .titulo{
         position: absolute;
         top: 16%;
@@ -396,48 +188,6 @@ header{
     }
 }
 @media(max-width:1500px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(6%);
-        height: fit-content;
-        position: absolute;
-        top: 20%;
-        left: 7%;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: x-large;
-    }
-    .barraP{
-        max-height: 2rem;
-        min-width: 150%;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        min-height: 1.4rem;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 10%;
-        max-width: 70%;
-        max-height: 70%;
-    }
-    .carTex{
-        position: absolute;
-        right: 5%;
-        top: 67%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -503,56 +253,6 @@ header{
     }
 }
 @media(max-width:1200px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(8%);
-        height: fit-content;
-        position: absolute;
-        top: 20%;
-        left: 7%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -10%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: x-large;
-    }
-    .barraP{
-        max-height: 2rem;
-        min-width: 90%;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        min-height: 1.4rem;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 12%;
-        max-width: 60%;
-        max-height: 60%;
-    }
-    .carTex{
-        position: absolute;
-        right: 2%;
-        top: 48%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -649,56 +349,6 @@ header{
     }
 }
 @media(max-width:850px) and (max-height:1200px) and (min-height:1150px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(12%);
-        height: fit-content;
-        position: absolute;
-        top: 20%;
-        left: 7%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -24%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: x-large;
-    }
-    .barraP{
-        max-height: 2rem;
-        min-width: 90%;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        min-height: 1.4rem;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 12%;
-        max-width: 60%;
-        max-height: 60%;
-    }
-    .carTex{
-        position: absolute;
-        right: 6%;
-        top: 70%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -797,56 +447,6 @@ header{
     }
 }
 @media(max-width:800px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(11%);
-        height: fit-content;
-        position: absolute;
-        top: 20%;
-        left: 7%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -24%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: x-large;
-    }
-    .barraP{
-        max-height: 2rem;
-        min-width: 90%;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        min-height: 1.4rem;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 12%;
-        max-width: 60%;
-        max-height: 60%;
-    }
-    .carTex{
-        position: absolute;
-        right: 2%;
-        top: 50%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -943,64 +543,6 @@ header{
     }
 }
 @media(max-width:500px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(12%);
-        height: fit-content;
-        position: absolute;
-        top: 30%;
-        left: 9%;
-    }
-    .setaVolt{
-        max-width: 60%;
-        max-height: 60%;
-        position: relative;
-        top: 20%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -50%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: small;
-    }
-    .barraP{
-        max-height: 0.6rem;
-        max-width: 10px;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        height: 1px;
-        font-size: xx-small;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 17%;
-        max-width: 40%;
-        max-height: 40%;
-    }
-    .carTex{
-        position: absolute;
-        font-size: x-small;
-        right: 2%;
-        top: 50%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -1097,64 +639,6 @@ header{
     }
 }
 @media(max-width:380px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(13%);
-        height: fit-content;
-        position: absolute;
-        top: 30%;
-        left: 9%;
-    }
-    .setaVolt{
-        max-width: 60%;
-        max-height: 60%;
-        position: relative;
-        top: 20%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -45%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: small;
-    }
-    .barraP{
-        max-height: 0.6rem;
-        max-width: 10px;
-        position:relative;
-        top: 0%;
-    }
-    .butP{
-        height: 1px;
-        font-size: xx-small;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 17%;
-        max-width: 40%;
-        max-height: 40%;
-    }
-    .carTex{
-        position: absolute;
-        font-size: x-small;
-        right: 2%;
-        top: 50%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -1220,66 +704,6 @@ header{
     }
 }
 @media(max-width:330px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(10%);
-        height: fit-content;
-        position: absolute;
-        top:33%;
-        left: 9%;
-    }
-    .setaVolt{
-        max-width: 55%;
-        max-height: 55%;
-        position: relative;
-        left: -2%;
-        top: 20%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -50%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: x-small;
-    }
-    .barraP{
-        max-height: 0.6rem;
-        max-width: 0.1px;
-        position:relative;
-        top: 0%;
-        font-size: xx-small;
-    }
-    .butP{
-        height: 0.02px;
-        font-size: 6px;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 17%;
-        max-width: 40%;
-        max-height: 40%;
-    }
-    .carTex{
-        position: absolute;
-        font-size: x-small;
-        right: 2%;
-        top: 50%;
-    }
     .titulo{
         position: absolute;
         top: 18%;
@@ -1345,66 +769,6 @@ header{
     }
 }
 @media(max-width:280px){
-    header{
-        display: flex;
-        background:linear-gradient(90deg, rgba(195,27,27,0.94) 0%, rgba(11,19,145,1) 50%, rgba(117,18,185,0.94) 100%);
-        position: absolute;
-        top:-1%;
-        right: 0%;
-        left: 0%;
-        max-height: 13%;
-    }
-    .Logo{
-        max-width: calc(11%);
-        height: fit-content;
-        position: absolute;
-        top: 30%;
-        left: 8%;
-    }
-    .setaVolt{
-        max-width: 55%;
-        max-height: 55%;
-        position: relative;
-        left: -2%;
-        top: 20%;
-    }
-    .BrPesq{
-        display: flex;
-        position: relative;
-        top: 5%;
-        left: -50%;
-        align-items:center;
-        font-size: large;
-    }
-    .textPq{
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        font-size: x-small;
-    }
-    .barraP{
-        max-height: 0.6rem;
-        max-width: 0.1px;
-        position:relative;
-        top: 0%;
-        font-size: xx-small;
-    }
-    .butP{
-        height: 0.02px;
-        font-size: 6px;
-    }
-    .carCom{
-        position: absolute;
-        right: 5%;
-        top: 17%;
-        max-width: 40%;
-        max-height: 40%;
-    }
-    .carTex{
-        position: absolute;
-        font-size: x-small;
-        right: 2%;
-        top: 50%;
-    }
     .titulo{
         position: absolute;
         top: 18%;

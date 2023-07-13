@@ -101,7 +101,7 @@ async function prenCar() {
         <div class="caripro">
           <img src="${item.image}" class="imCari">
           <p class="ticari">${item.title}</p>
-          <p class="pacari">R$${parseFloat(item.price).toFixed(2)}</p>
+          <p class="pecari">R$${parseFloat(item.price).toFixed(2)}</p>
           <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
         </div>
       `;

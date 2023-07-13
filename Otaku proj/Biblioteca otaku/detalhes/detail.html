@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./detail.css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/carin.css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/headers and pagers.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
     <title>Biblioteca Otaku</title>
     <link rel="icon" type="image/png" href="/Otaku proj/Biblioteca otaku/imagens/imagem logo.png"/>
@@ -20,7 +22,7 @@
         </div>
       </div>
       
-    <header>
+    <header class="header2">
         <a href="javascript:void(0)" onClick="history.go(-1); return false;">
         <img class="setaVolt" src="/Otaku proj/Biblioteca otaku/imagens/voltar.png" alt="seta para volar para pagina principal">
         </a>
@@ -35,20 +37,20 @@
         <img class="carCom" src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" alt="carrinho de compras"  onclick="togCar()">
         <p class="carTex"  onclick="togCar()">Meu Carrinho</p>
     </header>
-    <img  alt="testeDetail" class="ImgP" id="im">
+    <img  alt="Imagem Produto" class="ImgP" id="im">
     <p class="titulo" id="titl"></p>
     <div><p class="estrelas" id="Est"></p></div>
         <p id="count">Votos: indisponivel</p>
     <p class="gen" id="gen">Generos: Informação indisponivel</p>
     <p class="ye" id="ye">Ano de lançamento: Informação indisponivel</p>
     <p id="brand">Informação indisponivel</p>
-    <p id="preco">Informação indisponivel</p>
-    <button id="Carin">Adicionar ao Carrinho</button>
+    <p id="preco" alt="Preço">Informação indisponivel</p>
+    <button id="Carin"  alt="Adicionar ao carrinho">Adicionar ao Carrinho</button>
     <div class="desc">
-        <p class="description" id="descr"></p>
+        <p class="description" id="descr" alt="descrição"></p>
     </div>
     
     <script src="./detail.js"></script>
-    <script src="/Otaku proj/Biblioteca otaku/carin.js"></script>
+    <script src="/Otaku proj/Biblioteca otaku/Geral/carin.js"></script>
 </body>
 </html>

@@ -96,7 +96,7 @@ function pes() {
           const fil= document.getElementById('filters')
           fil.innerHTML=''
             ft.style.visibility="visible"
-          fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=7;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
+          fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=5;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
           <option selected value="">Genero</option>
           <option value="Action">Ação</option>
           <option value="Martial arts">Artes Marciais</option>

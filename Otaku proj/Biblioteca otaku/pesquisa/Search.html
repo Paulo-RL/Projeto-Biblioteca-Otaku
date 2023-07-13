@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Pesq.Css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/carin.css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/headers and pagers.css">
     <title>Biblioteca Otaku</title>
     <link rel="icon" type="image/png" href="/Otaku proj/Biblioteca otaku/imagens/imagem logo.png"/>
 </head>
@@ -18,7 +20,7 @@
           <div class="OI" id="OutrosItens"></div>
         </div>
       </div>
-    <header>
+    <header class="header2">
         <a href="javascript:void(0)" onClick="history.go(-1); return false;">
         <img class="setaVolt" src="/Otaku proj/Biblioteca otaku/imagens/voltar.png" alt="seta para volar para pagina principal">
         </a>
@@ -28,10 +30,10 @@
         <div class="BrPesq">
             <p class="textPq">Pesquisa</p>
             <input type="text" class="barraP" id="bPp">
-            <button type="submit" class="butP" onclick="pes2()">Pesquisa</button>
+            <button type="button" class="butP" onclick="pes2()">Pesquisa</button>
         </div>
-        <img class="carCom" src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" alt="carrinho de compras" onclick="togCar()">
-        <p class="carTex" onclick="togCar()">Meu Carrinho</p>
+        <img class="carCom" src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" alt="carrinho de compras"  onclick="togCar()">
+        <p class="carTex"  onclick="togCar()">Meu Carrinho</p>
     </header>
     <div class="textoVaz" id="textoVaz">
         <p>Nenhum resultado encontrado</p>
@@ -39,6 +41,6 @@
     <div class="prods" id="Container">
     </div>
     <script src="./search.js"></script>
-    <script src="/Otaku proj/Biblioteca otaku/carin.js"></script>
+    <script src="/Otaku proj/Biblioteca otaku/Geral/carin.js"></script>
 </body>
 </html>

@@ -9,9 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
-    <link id="mainC" href="./bib.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="./bib.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/carin.css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/headers and pagers.css">
     <script src="./bib.js"></script>
-    <script src="/Otaku proj/Biblioteca otaku/carin.js"></script>
+    <script src="/Otaku proj/Biblioteca otaku/Geral/carin.js"></script>
 </head>
 <body onload="loadCard();pageLoad()">
     <div class="CC" id="CC">
@@ -23,7 +25,7 @@
           <div class="OI" id="OutrosItens"></div>
         </div>
       </div>
-    <header>
+    <header class="Pager1">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-3 col-lg-1 col-md-2" id="imagemLogo">
@@ -87,7 +89,7 @@
                         </div>
                         <div class="col-2">
                             <img src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
-                            <p class="textoCarrinho" onclick="togCar()">Meu Carrinho</p>
+                            <p class="carText" onclick="togCar()">Meu Carrinho</p>
                         </div>
                     </div>
 
@@ -97,22 +99,22 @@
         </div>
     </header>
     <main>
-        <div class="container-fluid">
-            <div class="row bg-dark">
-                <div class="col-3">
-                    <p class="text-center text-light pt-2" style="font-size: 100%;" id="fl">Filtrar</p>
-                    <div class="Filtro">
-                        <div id="filters">
-                    </div>
+      <div class="container-fluid">
+        <div class="row bg-dark fitc">
+          <div class="col-12">
+            <div class="text-center text-light pt-2" style="font-size: 100%;" id="fl">Filtrar</div>
+            <div class="Filtro">
+              <div id="filters" class="filter-container">
 
-                    <button type="button" class="btn btn-outline-success btn-sm mb-3" onclick="filtro()" id="fb">Filtrar</button>
-                    </div>
-
-                </div>
-
+              </div>
             </div>
-
+          </div>
         </div>
+        <div class="row bg-dark">
+            <button type="button" class="btn btn-outline-success btn-sm mb-3 col-12" onclick="filtro()" id="fb">Filtrar</button>
+        </div>
+      </div>
+      
         
         <div class="row">
             <div class="col-12" id="CardsCont">
