@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./detail.css">
-    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/carin.css">
+    <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/2carin.css">
     <link rel="stylesheet" href="/Otaku proj/Biblioteca otaku/Geral/headers and pagers.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
     <title>Biblioteca Otaku</title>
@@ -34,8 +34,20 @@
             <input type="text" class="barraP" id="detP">
             <button type="submit" class="butP" onclick="pes4()">Pesquisa</button>
         </form>
-        <img class="carCom" src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" alt="carrinho de compras"  onclick="togCar()">
-        <p class="carTex"  onclick="togCar()">Meu Carrinho</p>
+        <div class="contCAR2">
+            <div class="top-right">
+              <img src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
+              <p class="carText" onclick="togCar()">Meu Carrinho</p>
+            </div>
+            <div class="CC" id="CC">
+              <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+              <div class="CarinCont" id="CarinCont"></div>
+              <div class="CartFooter">
+                <p class="PF" id="PrecoFinal"></p>
+                <div class="OI" id="OutrosItens"></div>
+              </div>
+            </div>
+        </div>
     </header>
     <img  alt="Imagem Produto" class="ImgP" id="im">
     <p class="titulo" id="titl"></p>

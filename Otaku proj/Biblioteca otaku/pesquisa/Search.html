@@ -32,8 +32,20 @@
             <input type="text" class="barraP" id="bPp">
             <button type="button" class="butP" onclick="pes2()">Pesquisa</button>
         </div>
-        <img class="carCom" src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" alt="carrinho de compras"  onclick="togCar()">
-        <p class="carTex"  onclick="togCar()">Meu Carrinho</p>
+        <div class="contCAR2">
+            <div class="top-right">
+              <img src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
+              <p class="carText" onclick="togCar()">Meu Carrinho</p>
+            </div>
+            <div class="CC" id="CC">
+              <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+              <div class="CarinCont" id="CarinCont"></div>
+              <div class="CartFooter">
+                <p class="PF" id="PrecoFinal"></p>
+                <div class="OI" id="OutrosItens"></div>
+              </div>
+            </div>
+        </div>
     </header>
     <div class="textoVaz" id="textoVaz">
         <p>Nenhum resultado encontrado</p>

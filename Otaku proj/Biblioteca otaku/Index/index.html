@@ -17,7 +17,7 @@
     <script src="/Otaku proj/Biblioteca otaku/Geral/carin.js"></script>
     <script src="/Otaku proj/Biblioteca otaku/Geral/cadastro e login.js"></script>
 </head>
-<body onload="loadCard();pageLoad()">
+<body onload="loadCard();pageLoad();LO()">
     <div class="CC" id="CC">
         <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
         <div class="CarinCont" id="CarinCont">
@@ -31,6 +31,9 @@
         <div class="LogCad" id="LC">
             
         </div>
+    </div>
+    <div class="perfil" id="perfil">
+        
     </div>
     <header class="Pager1">
         <div class="container-fluid">
@@ -68,16 +71,7 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                     </div>
                                     <div class="offcanvas-body">
-                                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                        <li class="nav-item">
-                                            <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close"  onclick="OpenCad()">Cadastro</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close"  onclick="OpenLog()">Login</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Minha conta</a>
-                                        </li>
+                                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un">
                                       </ul>
                                     </div>
                                   </div>
@@ -92,9 +86,19 @@
                             <p>Suporte 24/7 | Contato: 0800-31-1234</p>
                           </div>
                         </div>
-                        <div class="col-2">
-                            <img src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
-                            <p class="textoCarrinho" onclick="togCar()">Meu Carrinho</p>
+                        <div class="contCAR">
+                            <div class="top-right">
+                              <img src="/Otaku proj/Biblioteca otaku/imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
+                              <p class="carText" onclick="togCar()">Meu Carrinho</p>
+                            </div>
+                            <div class="CC" id="CC">
+                              <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+                              <div class="CarinCont" id="CarinCont"></div>
+                              <div class="CartFooter">
+                                <p class="PF" id="PrecoFinal"></p>
+                                <div class="OI" id="OutrosItens"></div>
+                              </div>
+                            </div>
                         </div>
                     </div>
 
@@ -109,9 +113,9 @@
                 <div class="col-12 col-lg-3 col-md-3">
                     <p class="text-center text-light pt-2" style="font-size: 100%;" id="fl">Filtrar</p>
                     <div class="Filtro">
-                        <div id="filters">
-                    </div>
-
+                        <div id="filters" class="filter-container">
+              
+                        </div>
                     <button type="button" class="btn btn-outline-success btn-sm mb-3" onclick="filtro()" id="fb">Filtrar</button>
                     </div>
 

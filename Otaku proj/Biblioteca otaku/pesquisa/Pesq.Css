@@ -69,7 +69,6 @@ body{
   border-color: blue;
   border-width: 0.3rem;
   color: blue;
-  transition: 0.01s;
 }
 
 .prodCa:hover {
@@ -135,7 +134,14 @@ body{
   -webkit-text-stroke-color: gold;
   border-color: gold;
 }
-
+.Divide{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  font-size: x-large;
+}
   
   
 

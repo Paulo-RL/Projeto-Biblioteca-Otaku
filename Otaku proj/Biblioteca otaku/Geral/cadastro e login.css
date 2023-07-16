@@ -50,3 +50,62 @@
     flex-direction: column;
     width: 80%;
 }
+
+.perfil{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 400;
+    width: 100vw;
+    height: 100vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(110, 110, 110);
+    visibility: hidden;
+}
+
+.perfil.active{
+    visibility: visible;
+}
+
+.perfilInfo{
+    align-self: center;
+    background-color: whitesmoke;
+    margin-top: calc(2%);
+    width: calc(80%);
+    height: calc(90%);
+    align-self: center;
+    display: grid;
+    grid-template-areas: ". . . TP . . ."
+    ". . . IP . . ."
+    "NM . . . Tel . ."
+    "EM . . . ST . .";
+}
+.TP{
+    grid-area: TP;
+    font-size: xx-large;
+}
+
+.NP{
+    grid-area: NM;
+    font-size: x-large;
+}
+.TlP{
+    grid-area: Tel;
+    font-size: x-large;
+}
+.EP{
+    grid-area: EM;
+    font-size: x-large;
+}
+.SP{
+    grid-area: ST;
+    font-size: x-large;
+}
+.IP{
+  grid-area: IP;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+}

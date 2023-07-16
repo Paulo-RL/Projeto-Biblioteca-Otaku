@@ -48,6 +48,17 @@ top: 0%;
 .butP {
 min-height: fit-content;
 padding: auto;
+background-color:transparent;
+font-weight: 200;
+border-color: rgb(2, 122, 18);
+color: rgb(2, 122, 18);
+-webkit-text-stroke-width: 0.2px;
+-webkit-text-stroke-color: white;
+}
+
+.butP:hover{
+  background-color: rgb(2, 122, 18);
+  color: white;
 }
 
 .setaVolt {
@@ -55,23 +66,32 @@ max-width: 40%;
 max-height: fit-content;
 }
 
-.carCom {
-position: relative;
-right: -50%;
-top: 13px;
-max-width: 7%;
-height: fit-content;
+.contCAR2 {
+  position: relative;
+  top: 10%;
+  right: 5%;
+  width: 60vw;
+  pointer-events: none;
+}
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: all;
+  cursor: pointer;
+}
+.top-right:hover .carrinho{
+  filter: invert();
+}
+.carrinho {
+  width: fit-content;
+  height: 50px;
 }
 
-.carTex {
-position: relative;
-right: -44%;
-top: 103px;
-max-width: 7%;
-height: fit-content;
-filter: invert();
+.carText {
+  font-size: 12px;
+  color: white;
 }
-
 @media (min-width: 2000px) {
 .header2 {
 max-height: 13%;
@@ -88,11 +108,10 @@ font-size: 30px;
 min-height: fit-content;
 font-size: large;
 }
-.carCom {
-max-width: 5%;
+.carrinho {
 right: -60%;
 }
-.carTex {
+.carText {
 font-size: X-large;
 right: -55%;
 top: 64%;
@@ -107,11 +126,10 @@ max-height: 13%;
 top: 20%;
 max-width: calc(7%);
 }
-.carCom {
-max-width: 7%;
+.carrinho {
 left: 40%;
 }
-.carTex {
+.carText {
 top: 67%;
 left: 34%;
 }
@@ -126,11 +144,11 @@ left: -15%;
 .barraP {
 min-width: 90%;
 }
-.carCom {
+.carrinho {
 top: 12%;
 left: 15%;
 }
-.carTex {
+.carText {
 left: 10%;
 top: 48%;
 }
@@ -158,12 +176,11 @@ left: -3%;
 .barraP {
 min-width: 90%;
 }
-.carCom {
+.carrinho {
 top: 15%;
-max-width: 13%;
 left: 2%;
 }
-.carTex {
+.carText {
 font-size: large;
 flex-wrap: nowrap;
 left: -7%;
@@ -187,12 +204,11 @@ width: 30%;
 top: 30%;
 left: -3%;
 }
-.carCom {
+.carrinho {
 top: 15%;
-max-width: 13%;
 left: 2%;
 }
-.carTex {
+.carText {
 font-size: medium;
 flex-wrap: nowrap;
 left: -7%;
@@ -224,11 +240,10 @@ max-width: 10px;
 .butP {
 font-size: xx-small;
 }
-.carCom {
+.carrinho {
 top: 13%;
-max-width: 17%;
 }
-.carTex {
+.carText {
 font-size: xx-small;
 right: 2%;
 top: 60%;
@@ -344,6 +359,19 @@ top: 16%;
 color:aliceblue;
 max-width: 100%;
 }
+.Fundopng {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/Otaku proj/img/Fundo.png");
+    background-repeat: repeat;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: -1;
+  }
 #CardsCont{
 color: white;
 border-style: none;
@@ -365,19 +393,16 @@ justify-content: flex-start;
 #mpCont {
 display: flex;
 flex-wrap: wrap;
+background-color: white;
 }
 
 .imgMP {
 height: 110px;
 width: 80px;
 }
-.textoCarrinho{
-text-align: justify;
-font-size: 12px;
-}
-.carrinho{
-width: 50px;
-height: 50px;
+.contCAR {
+  position: relative;
+  top: -140%;
 }
 .pI{
 font-size: 30px;
@@ -422,6 +447,24 @@ top: 70%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: black;
+}
+.filter-container #f1:hover,
+.filter-container #f2:hover,
+.filter-container #f3:hover,
+.filter-container #f4:hover {
+  position: relative;
+}
+
+#f1, #f2, #f3, #f4{
+  background-color: black;
+  color: white;
+}
+
+.filter-container select option:hover {
+  background-color: rgb(211, 211, 211);
+  filter: invert();
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(17, 0, 255);
 }
 @media(min-width:2000px){
 

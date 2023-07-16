@@ -1,19 +1,17 @@
 .CC {
   position: absolute;
+  top: 100px;
+  right: 0%;
   background-color: rgba(0, 255, 255, 0.11);
-  width: calc(20%);
-  top: 11%;
-  height: 90vh;
+  width: calc(40%);
+  height: 100vh;
   z-index: 15;
-  right: -30%;
   display: none;
 }
 
 .CC.active {
-  right: 0%;
   display: block;
 }
-
 .clo {
   height: auto;
   width: 8%;
@@ -51,11 +49,13 @@
   font-size: calc(1rem + 0.5vw);
   height: calc(1rem + 0.5vw);
   line-height: 1;
+  color: black;
 }
 
 .pecari {
   grid-area: pecari;
   font-size: calc(1rem + 0.5vw);
+  color: black;
 }
 
 .recari {
@@ -95,12 +95,13 @@
   position: absolute;
   bottom: 20px;
   left: 51.84%;
-  right: -56.6%;
+  right: -46.6%;
   transform: translateX(-50%);
   border-style: solid;
   color: black;
   cursor: pointer;
   text-align: center;
+  background-color: white;
 }
 
 .PF {
@@ -112,161 +113,181 @@
   font-weight: 800;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: gold;
+  color: black;
 }
-@media(min-width:2000px){
-    .CC{
-        width: calc(40%);
-      }
-      .recari{
-        font-size: x-large;
-        padding: 0px;
-      }
-      .ticari{
-        font-size: xx-large;
-      }
-      .CartFooter{
-        width: 94%;
-      }
-      .imCari{
-        width: 8rem;
-      }
-      .clo{
-        width: 3%;
-      }
-      .OI{
-        font-size: larger;
-      }
-      .PF{
-        font-size: x-large;
-        background-color: rgba(245, 245, 245, 0.685);
-      }
+
+@media (min-width: 2000px) {
+  .CC {
+    width: calc(40%);
+  }
+  .recari {
+    font-size: x-large;
+    padding: 0px;
+  }
+  .ticari {
+    font-size: xx-large;
+  }
+  .CartFooter {
+    width: 94%;
+  }
+  .imCari {
+    width: 8rem;
+  }
+  .clo {
+    width: 3%;
+  }
+  .OI {
+    font-size: larger;
+  }
+  .PF {
+    font-size: x-large;
+    background-color: rgba(245, 245, 245, 0.685);
+  }
 }
-@media(max-width: 1500px){
-    .CC{
-      width: calc(30%);
-    }
-    .recari{
-      font-size: large;
-      padding: 0px;
-    }
-    .ticari{
-      font-size: larger;
-    }
-    .CartFooter{
-      width: 93%;
-    }
+
+@media (max-width: 1500px) {
+  .CC {
+    width: calc(60%);
   }
-  @media(max-width: 1200px) {
-    .CC{
-        width: calc(40%);
-      }
-      .recari{
-        font-size: large;
-        padding: 0px;
-      }
-      .ticari{
-        font-size: larger;
-      }
-      .CartFooter{
-        width: 94%;
-      }
+  .recari {
+    font-size: large;
+    padding: 0px;
   }
-  @media (max-width: 912px){
-    .CC{
-        width: calc(40%);
-        background-color: rgba(3, 85, 85, 0.9);
-      }
-      .recari{
-        font-size: small;
-        padding: 0px;
-      }
-      .ticari{
-        font-size: larger;
-      }
-      .CartFooter{
-        width: 90%;
-      }
+  .ticari {
+    font-size: larger;
   }
-  @media (max-width: 540px){
-    .CC{
-        width: calc(90%);
-        background-color: rgba(3, 85, 85, 0.9);
-      }
+  .CartFooter {
+    width: 93%;
   }
-  @media(max-width:320px){
-    .CC{
-        width: calc(90%);
-        background-color: rgba(3, 85, 85, 0.9);
-      }
-      .recari{
-        font-size: x-small;
-      }
-      .ticari{
-        font-size: larger;
-      }
+}
+
+@media (max-width: 1200px) {
+  .CC {
+    width: calc(60%);
   }
-  @media(max-height: 1370px){
-    .CC{
-        height: 60vh;
-    }
+  .recari {
+    font-size: large;
+    padding: 0px;
   }
-  @media(max-height: 1150px){
-    .CC{
-        height: 79vh;
-    }
+  .ticari {
+    font-size: larger;
   }
-  @media(max-height: 950px){
-    .CC{
-        height: 92vh;
-    }
+  .CartFooter {
+    width: 94%;
   }
-  @media(max-height: 820px){
-    .CC{
-        height: 100vh;
-    }
+}
+
+@media (max-width: 912px) {
+  .CC {
+    width: calc(60%);
+    background-color: rgba(3, 85, 85, 0.9);
   }
-  @media(max-height: 750px){
-    .CC{
-        height: 111vh;
-    }
+  .recari {
+    font-size: small;
+    padding: 0px;
   }
-  @media(max-height: 670px){
-    .CC{
-        height: 116vh;
-    }
+  .ticari {
+    font-size: larger;
   }
-  @media(max-height: 600px){
-    .CC{
-        height: 140vh;
-    }
+  .CartFooter {
+    width: 90%;
   }
-  @media(max-height: 535px){
-    .CC{
-        height: 150vh;
-    }
+}
+
+@media (max-width: 540px) {
+  .CC {
+    width: calc(90%);
+    background-color: rgba(3, 85, 85, 0.9);
   }
-  @media(max-height: 435px){
-    .CC{
-        height: 190vh;
-    }
+}
+
+@media (max-width: 320px) {
+  .CC {
+    width: calc(90%);
+    background-color: rgba(3, 85, 85, 0.9);
   }
-  @media(max-height: 400px){
-    .CC{
-        height: 235vh;
-    }
+  .recari {
+    font-size: x-small;
   }
-  @media(max-height: 300px){
-    .CC{
-        height: 267vh;
-    }
+  .ticari {
+    font-size: larger;
   }
-  @media(min-height: 2000px){
-    .CC{
-        height: 38vh;
-    }
+}
+
+@media (max-height: 1370px) {
+  .CC {
+    height: 60vh;
   }
-  @media(min-height: 1400px){
-    .CC{
-        height: 54vh;
-    }
+}
+
+@media (max-height: 1150px) {
+  .CC {
+    height: 79vh;
   }
+}
+
+@media (max-height: 950px) {
+  .CC {
+    height: 98vh;
+  }
+}
+
+@media (max-height: 820px) {
+  .CC {
+    height: 100vh;
+  }
+}
+
+@media (max-height: 750px) {
+  .CC {
+    height: 111vh;
+  }
+}
+
+@media (max-height: 670px) {
+  .CC {
+    height: 116vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .CC {
+    height: 140vh;
+  }
+}
+
+@media (max-height: 535px) {
+  .CC {
+    height: 150vh;
+  }
+}
+
+@media (max-height: 435px) {
+  .CC {
+    height: 190vh;
+  }
+}
+
+@media (max-height: 400px) {
+  .CC {
+    height: 235vh;
+  }
+}
+
+@media (max-height: 300px) {
+  .CC {
+    height: 267vh;
+  }
+}
+
+@media (min-height: 2000px) {
+  .CC {
+    height: 38vh;
+  }
+}
+
+@media (min-height: 1400px) {
+  .CC {
+    height: 54vh;
+  }
+}

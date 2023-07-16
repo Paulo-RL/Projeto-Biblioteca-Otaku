@@ -1,31 +1,37 @@
 .card-item {
-margin-bottom: 20px;
-min-width: calc(25%);
-max-width: calc(20%);
+  margin-bottom: 20px;
+  min-width: calc(25%);
+  max-width: calc(20%);
 }
+
 body {
-overflow-x: hidden;
-max-width: 100%;
-padding: none;
-margin: none;
+  overflow-x: hidden;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
+
 img {
-max-width: 100%;
+  max-width: 100%;
 }
-.fitc{
+
+.fitc {
   min-height: 200px;
 }
+
 .Filtro {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .filter-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: start;
 }
+
 @media(min-width:2000px){
 .Filtro{
 display: grid;

@@ -3,14 +3,20 @@
   min-width: calc(33%);
   max-width: calc(30%);
 }
-.row-container.single-card{
-  position: relative;
-  left: 10%;
+
+.row-container:has(.single-card) #CardsCont {
+  width: 100%;
 }
+
+.row-container.single-card {
+  width: 100%;
+}
+
 .row-container.single-card .card-item {
-  min-width: calc(100%);
-  max-width: 100%;
+  min-width: calc(20% + 100px);
+  max-width: 33%;
 }
+
 .border-bottom {
   border-bottom: 1px solid red;
 }

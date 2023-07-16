@@ -3,118 +3,100 @@ function pes() {
 }
 
 function filtro() {
-  var fi = document.getElementById('f1').value
-  var fc = document.getElementById('f2').value
-        lerAPI(fi, fc); 
-  }
-  async function lerAPI(filtro = "",filtro2 = "") {
-    const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
-    const base = await response.json();
-    let produtosAPI = base.itens;
-    let carrossa = base.carr;
-  
-    if (filtro && filtro2) {
-      produtosAPI = produtosAPI.filter(product => {
-        const { gender, displayCategories } = product;
-        const desiredGender = filtro.toLowerCase();
-        const desiredCategory = filtro2.toLowerCase(); 
-        return (
-          (gender && gender.toLowerCase().includes(desiredGender)) &&
-          (displayCategories && displayCategories.toLowerCase() === desiredCategory)
-        );
-      });
-    }
-    else if (filtro && !filtro2) {
-      produtosAPI = produtosAPI.filter(product => {
-        const { gender} = product;
-        const desiredGender = filtro.toLowerCase(); 
-        return (
-          (gender && gender.toLowerCase().includes(desiredGender))
-        );
-      });
-    }
-    else if (!filtro && filtro2) {
-      produtosAPI = produtosAPI.filter(product => {
-        const { displayCategories } = product;
-        const desiredCategory = filtro2.toLowerCase(); 
-        return (
-          (displayCategories && displayCategories.toLowerCase() === desiredCategory)
-        );
-      });
-    }
-    changeCard(produtosAPI);
-    changeCar(carrossa);
-  }
-  async function lerAPI2(){
-    const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
-    base = await response.json();
-      let produtosAPI = await base.itens
-          changeMP(produtosAPI)
-  }
-async function loadCard(){
-        document.getElementById(`carossa`).style.visibility="hidden";
-        var fb = document.getElementById(`fb`)
-        fb.style.visibility="hidden"
-        var ft = document.getElementById(`fl`)
-        ft.style.visibility="hidden"
-        const fil= document.getElementById('filters')
-        fil.innerHTML=''
-        var load= true
-        if(load==true){
-          ft.style.visibility="visible"
-        fil.innerHTML=`<select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f1" onfocus='this.size=7;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
-        <option selected value="">Genero</option>
-        <option value="Action">Ação</option>
-        <option value="Martial arts">Artes Marciais</option>
-        <option value="Adventure">Aventura</option>
-        <option value="Comedy">Comédia</option>
-        <option value="Comedy drama">Comédia dramática</option>
-        <option value="Detective">Detetive</option>
-        <option value="ecchi">Ecchi</option>
-        <option value="Fantasy">Fantasia</option>
-        <option value="Science fantasy">Fantasia Científica</option>
-        <option value="Dark Fantasy">Fantasia Sombria</option>
-        <option value="science fiction">Ficção Científica</option>
-        <option value="Harem">Harem</option>
-        <option value="Horror">Horror</option>
-        <option value="Isekai">Isekai</option>
-        <option value="Mature">Maturo</option>
-        <option value="mystery">Mistério</option>
-        <option value="Romance">Romance</option>
-        <option value="Seinen">Seinen</option>
-        <option value="Shounen">Shounen</option>
-        <option value="Slice of Life">Slice of Life</option>
-        <option value="Supernatural">Sobrenatural</option>
-        <option value="Superhero">Super-herói</option>
-        <option value="Tragedy">Tragédia</option>
-        <option value="Xuanhuan">Xuanhuan</option>
-    </select>    
-    <select class="form-select mb-2 form-select-sm" aria-label="Default select example" id="f2" onfocus='this.size=5;' onblur='this.size=1;'onchange='this.size=1; this.blur();'>
-        <option selected value="">Categoria</option>
-        <option value="Manga">Manga</option>
-        <option value="Manhwa">Manhwa</option>
-        <option value="LightNovel">Light Novel</option>
-        <option value="WebNovel">Web Novel</option>
-    </select>`
-          fb.style.visibility="visible"
-        }
-    lerAPI()
-    lerAPI2()
+  const filtro1 = document.getElementById('f1').value;
+  const filtro2 = document.getElementById('f2').value;
+  ler(filtro1, filtro2);
 }
-function changeMP(produto) {
+
+async function ler(filtro1 = "", filtro2 = "") {
+  const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+  const base = await response.json();
+  var produtos = base.itens;
+  const carrossa = base.carr;
+  const produtos2 = base.itens;
+  produtos = produtos.filter(prods=>{
+    const { gender, displayCategories } = prods;
+      const desiredGender = filtro1.toLowerCase();
+      const desiredCategory = filtro2.toLowerCase();
+      return(
+        (!filtro1 || (gender && gender.toLowerCase().includes(desiredGender)))&&
+        (!filtro2 || (displayCategories && displayCategories.toLowerCase() === desiredCategory))
+      );
+  });
+  changeCard(produtos);
+  changeCar(carrossa);
+  changeMP(produtos2);
+}
+
+async function loadCard() {
+  document.getElementById(`carossa`).style.visibility = "hidden";
+  const fb = document.getElementById(`fb`);
+  fb.style.visibility = "hidden";
+  const ft = document.getElementById(`fl`);
+  ft.style.visibility = "hidden";
+  const fil = document.getElementById('filters');
+  fil.innerHTML = '';
+
+  ft.style.visibility = "visible";
+  
+  const filterOptions = [
+    { id: 'f1', label: 'Gênero', options: ['Ação', 'Artes Marciais', 'Aventura', 'Comédia', 'Comédia dramática', 'Drama', 'Detetive', 'Ecchi', 'Fantasia', 'Fantasia Científica', 'Fantasia Sombria', 'Ficção Científica', 'Harem', 'Horror', 'Isekai', 'Maduro', 'Mistério', 'Mistério de assassinato', 'Romance', 'Seinen', 'Shounen', 'Slice of Life', 'Sobrenatural', 'Sobrevivência', 'Super-herói', 'Suspense', 'Terror', 'Thriller', 'Tragédia', 'Xuanhuan'] },
+    { id: 'f2', label: 'Categoria', options: ['Manga', 'Manhwa', 'Light Novel', 'Web Novel'] },
+    ];
+
+  filterOptions.forEach((option) => {
+    const select = document.createElement('select');
+    select.classList.add('form-select', 'mb-2', 'form-select-sm');
+    select.setAttribute('aria-label', 'Default select example');
+    select.id = option.id;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.setAttribute('selected', 'true');
+    defaultOption.setAttribute('value', '');
+    defaultOption.textContent = option.label;
+    select.appendChild(defaultOption);
+
+    option.options.forEach((value) => {
+      const optionElement = document.createElement('option');
+      optionElement.setAttribute('value', value);
+      optionElement.textContent = value;
+      select.appendChild(optionElement);
+    });
+
+    fil.appendChild(select);
+  });
+
+  fb.style.visibility = "visible";
+  ler();
+
+  const selects = document.querySelectorAll('.filter-container select');
+  selects.forEach((select) => {
+    select.addEventListener('mouseover', () => {
+      select.size = 5;
+    });
+    select.addEventListener('click', () => {
+      select.size = 1;
+    });
+    select.addEventListener('mouseout', () => {
+      select.size = 1;
+    });
+  });
+}
+
+function changeMP(produtos) {
   const mp = document.getElementById('mpCont');
   mp.innerHTML = '';
 
   let lowestID = Infinity;
-  for (let i = 12; i < 18; i++) {
-    if (produto[i].id < lowestID) {
-      lowestID = produto[i].id;
+  produtos.forEach(product => {
+    if (product.id < lowestID) {
+      lowestID = product.id;
     }
-  }
+  });
 
   for (let i = 0; i < 6; i++) {
-    const itemID = lowestID + i;
-    const selectedItem = produto.find(item => item.id === itemID);
+    const itemID = lowestID + i + 12;
+    const selectedItem = produtos.find(item => item.id === itemID);
     const stars = stCount(selectedItem.rating.rate);
 
     const mpiHTML = `
@@ -136,14 +118,11 @@ function changeMP(produto) {
 
     const linkElement2 = document.getElementById(`g${selectedItem.id}`);
     linkElement2.addEventListener("click", function() {
-      let ic = selectedItem.id
-      return function() {
-        localStorage.setItem('d', ic);
-      };
-    }(selectedItem.id + 1));
+      const id = selectedItem.id;
+      localStorage.setItem('d', id);
+    });
   }
 }
-
 
 
 function changeCar(produtos) {
@@ -173,23 +152,19 @@ function changeCar(produtos) {
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" aria-label="Slide ${i + 1}"></button>
     `);
   }
+
   for (let i = 0; i < produtos.length; i++) {
     const linkElement = document.getElementById(`c${i}`);
-    linkElement.addEventListener('click', (function(index) {
-      return function() {
-        var id = produtos[index].id;
-        localStorage.setItem('d', id);
-      };
-    })(i));
+    linkElement.addEventListener('click', function() {
+      const id = produtos[i].id;
+      localStorage.setItem('d', id);
+    });
   }
 
   document.getElementById('carossa').style.visibility = "visible";
 }
 
-
-
-function changeCard(produtosAPI) {
-  console.log(produtosAPI)
+function changeCard(produtos) {
   const carCont = document.getElementById('CardsCont');
   carCont.innerHTML = '';
 
@@ -197,8 +172,8 @@ function changeCard(produtosAPI) {
   rowContainer.classList.add('row-container', 'ajuste2');
   carCont.appendChild(rowContainer);
 
-  const maxCards = 12; 
-  const filteredProducts = produtosAPI.slice(0, maxCards);
+  const maxCards = 12;
+  const filteredProducts = produtos.slice(0, maxCards);
 
   for (let i = 0; i < maxCards; i += 3) {
     const cardline = document.createElement('div');
@@ -236,12 +211,14 @@ function changeCard(produtosAPI) {
 
       const linkElement = document.getElementById(`b${cardIndex}`);
       linkElement.addEventListener('click', function() {
-        var id = produto.id;
+        const id = produto.id;
         localStorage.setItem('d', id);
       });
     }
   }
-
+  if (filteredProducts.length > 1 && filteredProducts.length <= 3) {
+    rowContainer.classList.add('single-card');
+  }
   if (filteredProducts.length === 1) {
     rowContainer.classList.add('single-card');
   }
@@ -277,3 +254,14 @@ function stCount(rate) {
 
   return stars;
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+  const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
+  if (loggedInUser) {
+    userName = loggedInUser.name;
+    userTel = loggedInUser.telephone;
+    userEm = loggedInUser.email;
+    Login = true;
+  }
+  LO();
+});
