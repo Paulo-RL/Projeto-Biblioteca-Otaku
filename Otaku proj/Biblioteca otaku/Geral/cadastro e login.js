@@ -86,7 +86,12 @@ if (userList.length === 1) {
 }
 
 function getLoggedInUserIndex() {
-  const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
+  var loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
+
+if (!loggedInUser) {
+  localStorage.setItem('LoggedInUser', JSON.stringify({ index: 1 }));
+  loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
+}
   return loggedInUser ? loggedInUser.index : -1;
 }
 
