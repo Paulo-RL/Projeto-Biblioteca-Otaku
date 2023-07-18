@@ -146,7 +146,6 @@ var Login = false;
 function LOG() {
   const Email = document.getElementById('IEML').value;
   const Password = document.getElementById('IPSL').value;
-  const UN = document.getElementById('un');
 
   if (!Email || !Password) {
     displayErrorMessage("Por favor, preencha todos os campos");
@@ -168,6 +167,7 @@ function LOG() {
   userEm = userList[userIndex].email;
   Login = true;
   localStorage.setItem('LoggedInUser', JSON.stringify({ index: userIndex, name: userName, telephone: userTel, email: userEm }));
+  localStorage.setItem('CSSPESQ', 'false');
   location.reload()
   LO()
 }
@@ -202,6 +202,9 @@ function ADM() {
     <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="ll()">Limpar lista</button>
   </li>
   <li class="nav-item">
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="CP()">CSS pesquisa</button>
+  </li>
+  <li class="nav-item">
     <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenPerf()">Perfil</button>
   </li>
   <li class="nav-item">
@@ -228,6 +231,18 @@ function ll() {
   }
 }
 
+function CP() {
+  var t = localStorage.getItem('CSSPESQ');
+  if (t && t === 'true') {
+    localStorage.setItem('CSSPESQ', 'false');
+  } else {
+    localStorage.setItem('CSSPESQ', 'true');
+  }
+  console.log(localStorage.getItem('CSSPESQ'));
+}
+
+
+
 function LOUT() {
   var logIndex= JSON.parse(localStorage.getItem('LoggedInUser'))
   logIndex=logIndex.index
@@ -236,6 +251,7 @@ function LOUT() {
   userTel = userList[1].telephone;
   userEm = userList[1].email;
   localStorage.setItem('LoggedInUser', JSON.stringify({ index: 1, name: userName, telephone: userTel, email: userEm }));
+  localStorage.setItem('CSSPESQ', 'false');
   location.reload()
   }
   const UN = document.getElementById('un');

@@ -2,7 +2,7 @@ html{
     overflow: hidden;
 }
 .ImgP{
-    max-width: 15rem;
+    width: auto;
     min-height: 22rem;
     max-height: 22rem;
     position: absolute;
