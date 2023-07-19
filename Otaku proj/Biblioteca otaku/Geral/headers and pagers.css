@@ -20,14 +20,13 @@ width: 99.9vw;
 max-width: calc(6%);
 height: fit-content;
 position: absolute;
-top: 12%;
-left: 9%;
+left: -99%;
 }
 
 .BrPesq {
 display: flex;
+position: relative;
 top: 5%;
-left: 20%;
 align-items: center;
 font-size: large;
 }
@@ -80,7 +79,7 @@ max-height: fit-content;
   pointer-events: all;
   cursor: pointer;
 }
-.top-right:hover .carrinho{
+.top-right:hover{
   filter: invert();
 }
 .carrinho {
@@ -88,18 +87,20 @@ max-height: fit-content;
   height: 50px;
 }
 
-.carText {
+.textoCarrinho {
   font-size: 12px;
-  color: white;
 }
 @media (min-width: 2000px) {
 .header2 {
 max-height: 13%;
 }
 .Logo {
-max-width: calc(3.5%);
-top: 20%;
+max-width: calc(5%);
 left: 7%;
+}
+.BrPesq{
+  position: relative;
+  left: 10%;
 }
 .textPq {
 font-size: 30px;
@@ -111,14 +112,14 @@ font-size: large;
 .carrinho {
 right: -60%;
 }
-.carText {
+.textoCarrinho {
 font-size: X-large;
 right: -55%;
-top: 64%;
+top: 63%;
 }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1500px) and (min-width: 1300px){
 .header2 {
 max-height: 13%;
 }
@@ -126,50 +127,77 @@ max-height: 13%;
 top: 20%;
 max-width: calc(7%);
 }
+.BrPesq{
+  left: 8%;
+}
 .carrinho {
 left: 40%;
 }
-.carText {
+.textoCarrinho {
 top: 67%;
 left: 34%;
 }
+.contCAR2{
+  top: 30%;
 }
-
+}
+@media (max-width: 1300px) {
+  .Logo{
+    left: -130%;
+  }
+  .BrPesq {
+  position: relative;
+  left: -10%;
+  }
+  .barraP {
+  min-width: 90%;
+  }
+  .contCAR2{
+    left: -15%;
+  }
+  }
 @media (max-width: 1200px) {
 .BrPesq {
 position: relative;
-top: 5%;
-left: -15%;
+left: 1%;
 }
 .barraP {
 min-width: 90%;
 }
 .carrinho {
-top: 12%;
 left: 15%;
 }
-.carText {
+.textoCarrinho {
 left: 10%;
-top: 48%;
 }
 }
-
-@media (max-width: 850px) and (max-height: 1200px) and (min-height: 1150px) /* iPad Air */ {
+@media(max-width:1400px) and (min-width:1350px){
+  .Logo{
+    left: -120%;
+  }
+  .BrPesq{
+    left: -10%;
+  }
+  .contCAR2{
+    left: -20%;
+  }
+}
+@media (max-width: 850px) and (max-height: 1200px) and (min-height: 1024px) /* iPad Air */ {
 .header2 {
 max-height: 13%;
 }
 .Logo {
 max-width: calc(10%);
-top: 40%;
+top: 30%;
 }
 .BrPesq {
 position: relative;
 top: 10%;
-left: -20%;
+left: 0%;
 }
 .setaVolt {
 position: relative;
-width: 30%;
+width: 40%;
 top: 30%;
 left: -3%;
 }
@@ -180,55 +208,74 @@ min-width: 90%;
 top: 15%;
 left: 2%;
 }
-.carText {
+.textoCarrinho {
 font-size: large;
 flex-wrap: nowrap;
 left: -7%;
 top: 62%;
 }
 }
-
+@media(max-width:920px){
+  .Logo{
+    left: -120%;
+  }
+  .contCAR2{
+    left: -5%;
+  }
+}
 @media (max-width: 800px) {
 .Logo {
 max-width: calc(9%);
-top: 40%;
 }
 .BrPesq {
 position: relative;
-top: 10%;
-left: -16%;
+left: -4%;
 }
 .setaVolt {
 position: relative;
-width: 30%;
-top: 30%;
+width: 40%;
 left: -3%;
 }
-.carrinho {
-top: 15%;
-left: 2%;
-}
-.carText {
+.textoCarrinho {
 font-size: medium;
 flex-wrap: nowrap;
-left: -7%;
-top: 62%;
 }
+.contCAR2{
+  left: -1%;
+}
+}
+@media (max-width: 740px) {
+  .Logo{
+    left: 10%;
+  }
 }
 
+@media (max-width: 670px) {
+  .BrPesq {
+  left: -8%;
+  }
+  .textPq {
+  font-size: small;
+  }
+  .barraP {
+  max-height: 0.6rem;
+  max-width: 300px;
+  }
+  .butP {
+  font-size: xx-small;
+  }
+  }
+  
 @media (max-width: 500px) {
 .header2 {
 height: 5rem;
 }
 .BrPesq {
 top: 0%;
-left: -30%;
+left: -15%;
 }
 .Logo {
-top: 24%;
-}
-.setaVolt {
-top: 4%;
+left: 8%;
 }
 .textPq {
 font-size: small;
@@ -240,16 +287,19 @@ max-width: 10px;
 .butP {
 font-size: xx-small;
 }
-.carrinho {
-top: 13%;
+.contCAR2{
+  top: 5%;
 }
-.carText {
+.textoCarrinho {
 font-size: xx-small;
 right: 2%;
-top: 60%;
 }
 }
-
+@media (max-width: 420px) {
+  .Logo{
+    left: 15%;
+  }
+  }
 @media (max-width: 400px) {
 .setaVolt {
 position: relative;
@@ -258,13 +308,24 @@ top: 20%;
 left: -3%;
 }
 }
-
+@media (width: 390px) {
+  .BrPesq {
+  left: -20%;
+  }
+  .Logo{
+    left: 10%;
+  }
+  }
 @media (max-width: 380px) {
 .BrPesq {
 left: -25%;
 }
 }
-
+@media (max-width: 360px) {
+  .Logo{
+    left: 7%;
+  }
+}
 @media (max-width: 330px) {
 .Logo {
 max-width: calc(10%);
@@ -285,7 +346,7 @@ top: 25%;
 }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 280px) /* Bugou por algum motivo */ {
 .Logo {
 max-width: calc(11%);
 top: 30%;
@@ -300,58 +361,191 @@ position: relative;
 .butP {
 padding: 0%;
 }
+.BrPesq{
+  position: relative;
+  left:unset;
 }
-
+}
+@media (max-height: 720px) and (max-width: 550px){
+  .Logo{
+    left: -120%;
+  }
+  .barraP{
+    width: 80px;
+  }
+  .BrPesq{
+    left: -15%;
+  }
+  .setaVolt{
+    top: 30%;
+  }
+}
+@media (max-height: 550px) and (max-width: 720px){
+  .Logo{
+    left: -120%;
+  }
+  .barraP{
+    width: 80px;
+  }
+  .BrPesq{
+    left: -15%;
+  }
+  .setaVolt{
+    top: 30%;
+  }
+}
+@media (max-height: 720px) and (max-width: 1114px){
+  .Logo{
+    left: -120%;
+    top: 30%;
+  }
+}
+@media (max-height: 1114px) and (max-width: 720px){
+  .Logo{
+    left: -120%;
+  }
+  .barraP{
+    width: 80px;
+  }
+  .BrPesq{
+    left: -15%;
+  }
+  .setaVolt{
+    top: 30%;
+  }
+}
+@media (max-height: 824px) and (max-width: 1200px) {
+  .setaVolt{
+    position: relative;
+  }
+}
+@media (max-height: 524px) and (max-width: 1200px) {
+  .Logo {
+    top: 40%;
+  }
+}
+@media (max-height: 1400px) {
+  .setaVolt{
+    position: relative;
+    top: 30%;
+  }
+  .Logo {
+    max-width: calc(70%);
+    position: relative;
+    top: 30%;
+    }
+}
 @media (max-height: 1100px) {
-.BrPesq {
-top: 2%;
-}
+  .BrPesq {
+    top: 2%;
+  }
 }
 
 @media (max-height: 1000px) {
-.BrPesq {
-top: 4%;
-}
+  .BrPesq {
+    top: 4%;
+  }
 }
 
 @media (max-height: 900px) {
-.BrPesq {
-top: 6%;
+  .BrPesq {
+    top: 6%;
+  }
+  .Logo{
+    top: 30%;
+  }
+  .setaVolt{
+    top: 5%;
+  }
 }
+@media (max-height: 852px) {
+  .setaVolt{
+    top: 20%;
+  }
 }
-
 @media (max-height: 800px) {
-.BrPesq {
-top: 8%;
-}
+  .BrPesq {
+    top: 8%;
+  }
 }
 
-@media (max-height: 700px) {
-.BrPesq {
-top: 10%;
-}
+@media (max-height: 720px) {
+  .BrPesq {
+    top: 0%;
+  }
+  .Logo{
+    top: 35%;
+  }
 }
 
 @media (max-height: 600px) {
-.BrPesq {
-top: 12%;
+  .BrPesq {
+    top: 12%;
+  }
 }
+
+@media (max-height: 524px) and (max-width: 800px) {
+  .BrPesq {
+    top: 12%;
+  }
+  .Logo {
+    top: 40%;
+  }
+  .setaVolt {
+    top: 37%;
+  }
+}
+
+@media (max-height: 524px) and (max-width: 600px) {
+  .BrPesq {
+    top: 12%;
+  }
+  .Logo {
+    top: 40%;
+  }
+  .setaVolt {
+    top: 20%;
+  }
+}
+
+@media (max-height: 524px) and (max-width: 400px) {
+  .setaVolt {
+    top: 30%;
+  }
 }
 
 @media (max-height: 500px) {
-.BrPesq {
-top: 14%;
+  .BrPesq {
+    top: 14%;
+  }
 }
+@media (max-height: 420px) {
+  .setaVolt{
+    position: relative;
+    top: 27%;
+  }
 }
-
 @media (max-height: 400px) {
-.BrPesq {
-top: 16%;
+  .BrPesq {
+    top: 16%;
+  }
 }
+
+
+@media (max-height: 524px) and (max-width: 430px) {
+  .setaVolt {
+    top: 30%;
+  }
+  .BrPesq{
+    left: -30%;
+  }
+  .Logo{
+    left: -160%;
+  }
+  .contCAR2{
+    left: -5%;
+  }
 }
-
-
-
 
 
 
