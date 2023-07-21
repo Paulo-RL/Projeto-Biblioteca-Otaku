@@ -288,6 +288,22 @@
     "rating": { "rate": 10, "count": 145 }
   },
   {
+    "id": 50,
+    "title": "Jojo's Bizarre Adventure - Parte 5: Golden Wind, Vol. 1",
+    "price": 44.90,
+    "description": "Koichi Hirose viaja à Itália em busca de Haruno Shiobana, o suposto filho de Dio. Ao chegar lá, um garoto loiro que se diz chamar Giorno Giovanna rouba sua bagagem... A estranha semelhança na pronúncia dos nomes e certa demonstração de poder podem indicar que Giorno e Haruno são a mesma pessoa!",
+    "image": "https://raw.githubusercontent.com/Paulo-RL/Projeto-Biblioteca-otaku/main/Otaku%20proj/img/JOJO%20GW.webp",
+    "brandName": "Hirohiko Araki",
+    "season": "Inverno",
+    "usage": "Coleção",
+    "gender": "Aventura , fantasia , sobrenatural",
+    "year": "1995",
+    "articleType": "Volume1",
+    "displayCategories": "Manga",
+    "category": "Manga - Volume1",
+    "rating": { "rate": 10, "count": 1359 }
+  },
+  {
     "id": 19,
     "title": "Overlord, Vol. 1: The Undead King",
     "price": 117.27,
@@ -785,22 +801,6 @@
     "rating": { "rate": 8, "count": 79 }
     },
     {
-    "id": 50,
-    "title": "Jojo's Bizarre Adventure - Parte 5: Golden Wind, Vol. 1",
-    "price": 44.90,
-    "description": "Koichi Hirose viaja à Itália em busca de Haruno Shiobana, o suposto filho de Dio. Ao chegar lá, um garoto loiro que se diz chamar Giorno Giovanna rouba sua bagagem... A estranha semelhança na pronúncia dos nomes e certa demonstração de poder podem indicar que Giorno e Haruno são a mesma pessoa!",
-    "image": "https://raw.githubusercontent.com/Paulo-RL/Projeto-Biblioteca-otaku/main/Otaku%20proj/img/JOJO%20GW.webp",
-    "brandName": "Hirohiko Araki",
-    "season": "Inverno",
-    "usage": "Coleção",
-    "gender": "Aventura , fantasia , sobrenatural",
-    "year": "1995",
-    "articleType": "Volume1",
-    "displayCategories": "Manga",
-    "category": "Manga - Volume1",
-    "rating": { "rate": 10, "count": 1359 }
-    },
-    {
     "id": 51,
     "title": "Deadman Wonderland, Vol. 1",
     "price": 48.05,
@@ -863,6 +863,54 @@
     "displayCategories": "Manhwa",
     "category": "Manhwa - Volume1",
     "rating": { "rate": 10, "count": 167 }
+    },
+    {
+    "id": 55,
+    "title": "Second Coming of Gluttony",
+    "price": 155.03,
+    "description": "Ele era um viciado, um perdedor, um ser desprezível. Mas, um sonho passageiro que poderia não ser apenas um sonho reativa os seus sentidos e sentimentos antes perdidos. Possuindo uma habilidade única, ele irá usá-la para forjar o seu caminho no mundo conhecido agora como 'O Paraíso Perdido'.",
+    "image": "https://github.com/Paulo-RL/Projeto-Biblioteca-otaku/blob/main/Otaku%20proj/img/Second%20Coming%20of%20Gluttony.jpg?raw=true",
+    "brandName": "Ro Yu-jin",
+    "season": "Primavera",
+    "usage": "Coleção",
+    "gender": "Ação, Aventura, Fantasia, Magia, Seinen, Sobrenatural",
+    "year": "2020",
+    "articleType": "Volume1",
+    "displayCategories": "Manhwa",
+    "category": "Manhwa - Volume1",
+    "rating": { "rate": 10, "count": 643 }
+    },
+    {
+    "id": 56,
+    "title": "Dungeon Reset",
+    "price": 89.70,
+    "description": "[A Dungeon está resetando.] Quando a Dungeon é completamente explorada e suas armadilhas são ativadas, ela é resetada automaticamente para os próximos ‘jogadores’. Mas esses resets não funcionam em mim?! A única existência na dungeon que se tornou livre dos resets eternos da dungeon. Com o up absoluto, Jeong Da-Un, ‘O bugado’, começou sua exploração na dungeon!!!",
+    "image": "https://raw.githubusercontent.com/Paulo-RL/Projeto-Biblioteca-otaku/main/Otaku%20proj/img/Dungeon-Reset.webp",
+    "brandName": "Daul",
+    "season": "Inverno",
+    "usage": "Coleção",
+    "gender": "Ação, Aventura, Comédia, Fantasia, Isekai, Shounen",
+    "year": "2020",
+    "articleType": "Volume1",
+    "displayCategories": "Manhwa",
+    "category": "Manhwa - Volume1",
+    "rating": { "rate": 9, "count": 111 }
+    },
+    {
+    "id": 57,
+    "title": "Nano Machine",
+    "price": 54.50,
+    "description": "Depois de ser desprezado e ter sua vida posta em perigo, um órfão do Culto Demoníaco, Cheon Yeo-Woon, recebe a visita inesperada de seu descendente do futuro, que insere uma nano máquina no corpo de Cheon Yeo-Woon, que muda drasticamente Vida de Cheon Yeo-Woon após sua ativação. A história da jornada de Cheon Yeo-Woon de contornar o Culto Demoníaco e se tornar o melhor artista marcial apenas começou.",
+    "image": "https://github.com/Paulo-RL/Projeto-Biblioteca-otaku/blob/main/Otaku%20proj/img/Nano-Machine.jpg?raw=true",
+    "brandName": "한중월야",
+    "season": "Outono",
+    "usage": "Coleção",
+    "gender": "Ação, Fantasia, Harem, Artes Marciais, Romance, Sci-fi, Seinen, Sobrenatural, Wuxia",
+    "year": "2021",
+    "articleType": "Volume1",
+    "displayCategories": "Manhwa",
+    "category": "Manhwa - Volume1",
+    "rating": { "rate": 8, "count": 1551 }
     }
    ],
   "carr":[
