@@ -79,8 +79,8 @@
 
 .imCari {
   grid-area: imCari;
-  height: 100%;
-  width: 4rem;
+  height: inherit;
+  width: auto;
 }
 
 .CartFooter {
@@ -129,9 +129,6 @@
   }
   .CartFooter {
     width: 94%;
-  }
-  .imCari {
-    width: 8rem;
   }
   .clo {
     width: 3%;

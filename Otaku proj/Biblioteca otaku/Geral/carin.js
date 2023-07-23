@@ -46,8 +46,8 @@ function IniciarCarin(remover = '') {
 
   localStorage.setItem('DE', JSON.stringify(cartItems));
   localStorage.setItem('SA', JSON.stringify(remItems));
-  prenCar()
-  pageSave(existingItems, preItems)
+  prenCar();
+  pageSave(existingItems, preItems);
 }
 
 localStorage.removeItem('DE');
@@ -57,11 +57,9 @@ function removerItem(itemID) {
 }
 
 async function fetchItemDetails(itemID) {
-  itemID -= 1;
   const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
   const base = await response.json();
-  let it = await base.itens;
-  it = it[itemID];
+  let it = base.itens.find(item => item.id === parseInt(itemID));
   return it;
 }
 
@@ -69,10 +67,12 @@ async function fetchItemPrices(itemIDs) {
   try {
     const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
     const base = await response.json();
+
     const prices = itemIDs.map(itemID => {
-      const item = base.itens[itemID - 1];
+      const item = base.itens.find(item => item.id === parseInt(itemID));
       return item.price;
     });
+    console.log(prices)
     return prices;
   } catch (error) {
     console.error('Error fetching item prices:', error);
@@ -84,8 +84,8 @@ function togCar() {
   document.getElementById('CC').classList.toggle('active');
 }
 
-function pageSave(existingItems, preItems){
-    let cartItems = existingItems.length > 0 ? existingItems : preItems;
+function pageSave(existingItems, preItems) {
+  let cartItems = existingItems.length > 0 ? existingItems : preItems;
   const loggedInUserIndex = getLoggedInUserIndex();
   if (loggedInUserIndex !== -1) {
     if (!Array.isArray(cartItems[loggedInUserIndex])) {
@@ -101,10 +101,10 @@ function pageSave(existingItems, preItems){
   localStorage.setItem('LO', JSON.stringify(savedItems));
 }
 
-function pageLoad() {
-  localStorage.setItem('DE', localStorage.getItem('LO'))
-  const saved=getLoggedInUserCart()
-  prenCar(saved)
+async function pageLoad() {
+  localStorage.setItem('DE', localStorage.getItem('LO'));
+  const saved = getLoggedInUserCart();
+  prenCar(saved);
 }
 
 async function prenCar(cartItems2) {
@@ -112,12 +112,11 @@ async function prenCar(cartItems2) {
   const PFContainer = document.getElementById('PrecoFinal');
   const OIContainer = document.getElementById('OutrosItens');
   var cartItems;
-  if(cartItems2){
-    cartItems= cartItems2;
+  if (cartItems2) {
+    cartItems = cartItems2;
+  } else {
+    cartItems = getLoggedInUserCart();
   }
-  else{
-  cartItems=getLoggedInUserCart()
-}
   cari.innerHTML = '';
   PFContainer.textContent = '';
   OIContainer.textContent = '';
@@ -147,6 +146,12 @@ async function prenCar(cartItems2) {
     oiContainer.classList.add('OI');
     oiContainer.textContent = `Outros itens: ${cartItems.length - 4}`;
     OIContainer.appendChild(oiContainer);
+    const ofLimit = cartItems.splice(4);
+    const prices = await fetchItemPrices(ofLimit);
+
+    prices.forEach(price => {
+      precoF += parseFloat(price);
+    });
   }
 
   PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
