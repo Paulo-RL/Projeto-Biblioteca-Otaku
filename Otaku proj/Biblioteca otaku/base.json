@@ -529,7 +529,7 @@
   },
   {
     "id": 33,
-    "title": "Higurashi no Naku Koro ni (When They Cry), Vol. 1",
+    "title": "When They Cry (Higurashi no Naku Koro ni), Vol. 1",
     "price": 179.25,
     "description": "A vida não poderia ser melhor para Keiichi Maebara. Claro, ele se mudou para uma pacata cidadezinha onde nada acontece e o ensino médio consiste em uma escola de um quarto - mas seus novos amigos e colegas são todas garotas bonitas! Quando ele se depara com uma história sobre um terrível assassinato local, no entanto, seu contentamento se transforma em desconforto quando ele se vê envolvido em uma teia de intriga silenciosa que envolve seus novos amigos... e ameaça sua própria existência.",
     "image": "https://github.com/Paulo-RL/Projeto-Biblioteca-otaku/blob/main/Otaku%20proj/img/When%20they%20cry.jpg?raw=true",
@@ -911,6 +911,22 @@
     "displayCategories": "Manhwa",
     "category": "Manhwa - Volume1",
     "rating": { "rate": 8, "count": 1551 }
+    },
+    {
+    "id": 58,
+    "title": "Undead Unluck, Vol. 1",
+    "price": 46.74,
+    "description": "A jovem Fuuko estava decidida a morrer quando um homem misterioso com um corpo imortal surge diante dela! Andy, o 'Undead' está determinado a usar os poderes de Fuuko, que trazem azar a qualquer um que a toca, para causar a própria morte e, assim, decide que irá acompanhá-la até que isso aconteça... E é nesse momento que uma organização surge caçando os dois!!",
+    "image": "https://github.com/Paulo-RL/Projeto-Biblioteca-otaku/blob/main/Otaku%20proj/img/Undead-Unluck-vol-1.jpg?raw=true",
+    "brandName": "Yoshifumi Tozuka",
+    "season": "Primavera",
+    "usage": "Coleção",
+    "gender": "Ação, Comédia, Drama, Ecchi, Ficção Científica, Shounen, Sobrenatural",
+    "year": "2021",
+    "articleType": "Volume1",
+    "displayCategories": "Manga",
+    "category": "Manga - Volume1",
+    "rating": { "rate": 10, "count": 757 }
     }
    ],
   "carr":[

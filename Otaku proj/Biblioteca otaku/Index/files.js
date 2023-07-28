@@ -40,7 +40,7 @@ async function loadCard() {
   ft.style.visibility = "visible";
   
   const filterOptions = [
-    { id: 'f1', label: 'Gênero', options: ['Ação', 'Artes Marciais', 'Aventura', 'Comédia', 'Comédia dramática', 'Drama', 'Detetive', 'Ecchi', 'Fantasia', 'Fantasia Científica', 'Fantasia Sombria', 'Ficção Científica', 'Harem', 'Horror', 'Isekai', 'Maduro', 'Mistério', 'Mistério de assassinato', 'Romance', 'Seinen', 'Shounen', 'Slice of Life', 'Sobrenatural', 'Sobrevivência', 'Super-herói', 'Suspense', 'Terror', 'Thriller', 'Tragédia', 'Xuanhuan'] },
+    { id: 'f1', label: 'Gênero', options: ['Ação', 'Artes Marciais', 'Aventura', 'Comédia', 'Comédia dramática', 'Drama', 'Detetive', 'Ecchi', 'Fantasia', 'Fantasia Científica', 'Fantasia Sombria', 'Ficção Científica', 'Harem', 'Horror', 'Isekai', 'Magia', 'Maduro', 'Mistério', 'Mistério de assassinato', 'Romance', 'Seinen', 'Shounen', 'Slice of Life', 'Sobrenatural', 'Sobrevivência', 'Super-herói', 'Suspense', 'Terror', 'Thriller', 'Tragédia', 'Xuanhuan'] },
     { id: 'f2', label: 'Categoria', options: ['Manga', 'Manhwa', 'Light Novel', 'Web Novel'] },
     ];
 
@@ -194,7 +194,7 @@ function changeCard(produtos) {
       cardElement.classList.add('col-4', 'card-item');
       cardElement.innerHTML = `
         <div class="card" id="Cards">
-          <img src="${produto.image}" value="" class="card-img-top" alt="" id="imCa">
+          <img src="${produto.image}" value="" class="card-img-top" alt="Imagem produto ${cardIndex}" id="imCa">
           <div class="card-body">
             <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="b${cardIndex}">
               <h5 class="card-title" id="TiCr">${produto.title}</h5>
