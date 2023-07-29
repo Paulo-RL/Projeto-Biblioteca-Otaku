@@ -9,23 +9,13 @@ function OpenLog() {
 }
 
 function OpenBox() {
-  var lccElement = document.getElementById('LCC');
-  lccElement.classList.toggle("active");
+  const lcc = document.getElementById('LCC');
+  lcc.classList.toggle('active');
 
-  setTimeout(function() {
-    window.scrollTo({ top: 0 });
-
-    var htmlElement = document.querySelector("html");
-    var bodyElement = document.querySelector("body");
-
-    if (lccElement.classList.contains("active")) {
-      htmlElement.style.overflow = "hidden";
-      bodyElement.style.overflow = "hidden";
-    } else {
-      htmlElement.style.overflow = "";
-      bodyElement.style.overflow = "";
-    }
-  }, 700);
+  const elementsToToggle = document.querySelectorAll('header, main, footer');
+  elementsToToggle.forEach(element => {
+    element.classList.toggle('hidden');
+  });
 }
 
 function OpenCad2() {

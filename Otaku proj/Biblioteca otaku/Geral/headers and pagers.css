@@ -566,6 +566,37 @@ max-width: 100%;
     opacity: 0.5;
     z-index: -1;
   }
+  ::-webkit-scrollbar {
+    width: 0.8vw;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 139, 0.315);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(98, 18, 151, 0.94);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-button:start:decrement,
+  ::-webkit-scrollbar-button:end:increment {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 139, 0.315);
+    width: auto;
+    height: 20px;
+  }
+  
+  ::-webkit-scrollbar-button:start:decrement {
+    background-image: url('/Otaku proj/Biblioteca otaku/imagens/Cima.jpeg');
+    background-position: center;
+  }
+  
+  ::-webkit-scrollbar-button:end:increment {
+    background-image: url('/Otaku proj/Biblioteca otaku/imagens/Baixo.png');
+    background-position: center;
+  }
 #CardsCont{
 color: white;
 border-style: none;
