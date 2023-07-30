@@ -8,11 +8,11 @@
     "brandName": "Jun Maeda",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Fantasia",
+    "gender": ["Fantasia"],
     "year": "2010",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 26 }
   },
   {
@@ -24,11 +24,11 @@
     "brandName": "Makoto Uezu",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Mistério de assassinato",
+    "gender": ["Mistério de assassinato"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 1486 }
   },
   {
@@ -40,11 +40,11 @@
     "brandName": "Tite Kubo",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Aventura, Artes Marciais, Sobrenatural",
+    "gender": ["Aventura", "Artes Marciais", "Sobrenatural"],
     "year": "2001",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 1290 }
   },  
   {
@@ -56,11 +56,11 @@
     "brandName": "Fuse",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Fantasia, Isekai, ecchi",
+    "gender": ["Fantasia", "Isekai", "ecchi"],
     "year": "2014",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 2708 }
   },  
   {
@@ -72,11 +72,11 @@
     "brandName": "Tanaka Yuu",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Fantasia, Shounen, Slice of Life",
+    "gender": ["Ação", "Aventura", "Comédia", "Fantasia", "Shounen", "Slice of Life"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 9, "count": 1335 }
   },  
   {
@@ -88,11 +88,11 @@
     "brandName": "Tang Jia San Shao",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Fantasia, Artes Marciais, Romance, Shounen, Xuanhuan",
+    "gender": ["Ação", "Aventura", "Fantasia", "Artes Marciais", "Romance", "Shounen", "Xuanhuan"],
     "year": "2008",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 1118 }
   },  
   {
@@ -104,11 +104,11 @@
     "brandName": "Yoshihiro Togashi",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia, Aventura",
+    "gender": ["Ação", "Fantasia", "Aventura"],
     "year": "2005",
-    "articleType": "Volume22",
+    "articleType": "Volume 22",
     "displayCategories": "Manga",
-    "category": "Manga - Volume22",
+    "category": "Manga - Volume 22",
     "rating": { "rate": 10, "count": 428 }
   },  
   {
@@ -120,11 +120,11 @@
     "brandName": "Chugong",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia",
+    "gender": ["Ação", "Fantasia"],
     "year": "2018",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 10, "count": 463 }
   },
   {
@@ -136,11 +136,11 @@
     "brandName": "Yuu Kamiya",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Isekai, Fantasia, Ficção Científica",
+    "gender": ["Isekai", "Fantasia", "Ficção Científica"],
     "year": "2012",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 9, "count": 304 }
   },
   {
@@ -152,11 +152,11 @@
     "brandName": "Kafka Asagiri",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Mistério, Sobrenatural",
+    "gender": ["Ação", "Mistério", "Sobrenatural"],
     "year": "2018",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 682 }
   },
   {
@@ -168,11 +168,11 @@
     "brandName": "TurtleMe",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia Sombria",
+    "gender": ["Ação", "Fantasia Sombria"],
     "year": "2016",
-    "articleType": "E-Book",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1 - E-Book",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 9, "count": 5896 }
   },
   {
@@ -184,11 +184,11 @@
     "brandName": "Nisio Isin",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Mistério, Detetive",
+    "gender": ["Mistério", "Detetive"],
     "year": "2006",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 9, "count": 1286 }
   },
   {
@@ -200,7 +200,7 @@
     "brandName": "Shin Noah",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Fantasia, Artes Marciais, Shounen, Tragédia",
+    "gender": ["Ação", "Aventura", "Comédia", "Fantasia", "Artes Marciais", "Shounen", "Tragédia"],
     "year": "2018",
     "articleType": "E-Book",
     "displayCategories": "Web Novel",
@@ -216,11 +216,11 @@
     "brandName": "Densuke",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Fantasia, Harem, Maduro, Seinen, Sobrenatural",
+    "gender": ["Ação", "Aventura", "Comédia", "Fantasia", "Harem", "Maduro", "Seinen", "Sobrenatural"],
     "year": "2015",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 8, "count": 2246 }
   },
   {
@@ -232,11 +232,11 @@
     "brandName": "Okina Baba",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Aventura, Isekai",
+    "gender": ["Aventura", "Isekai"],
     "year": "2015",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 3274 }
   },
   {
@@ -248,11 +248,11 @@
     "brandName": "Koyoharu Gotōge",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Aventura, Fantasia Sombria, Artes Marciais",
+    "gender": ["Aventura", "Fantasia Sombria", "Artes Marciais"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 13730 }
   },  
   {
@@ -264,11 +264,11 @@
     "brandName": "Atsushi Okubo",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia",
+    "gender": ["Ação", "Fantasia"],
     "year": "2004",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 1333 }
   },
   {
@@ -280,11 +280,11 @@
     "brandName": "Hirohiko Araki",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Aventura, Fantasia, Sobrenatural",
+    "gender": ["Aventura", "Fantasia", "Sobrenatural"],
     "year": "1989",
-    "articleType": "Volume3",
+    "articleType": "Volume 3",
     "displayCategories": "Manga",
-    "category": "Manga - Volume3",
+    "category": "Manga - Volume 3",
     "rating": { "rate": 10, "count": 145 }
   },
   {
@@ -296,11 +296,11 @@
     "brandName": "Hirohiko Araki",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Aventura , fantasia , sobrenatural",
+    "gender": ["Aventura", "Fantasia", "Sobrenatural"],
     "year": "1995",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 1359 }
   },
   {
@@ -312,11 +312,11 @@
     "brandName": "Kugane Maruyama",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia, Aventura",
+    "gender": ["Ação", "Fantasia", "Aventura"],
     "year": "2010",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 4584 }
   },
   {
@@ -328,11 +328,11 @@
     "brandName": "Takaya Kagami",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia Sombria",
+    "gender": ["Ação", "Fantasia Sombria"],
     "year": "2012",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 1107 }
   },
   {
@@ -344,11 +344,11 @@
     "brandName": "Shiden Kanzaki",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia, Aventura",
+    "gender": ["Ação", "Fantasia", "Aventura"],
     "year": "2011",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 9, "count": 90 }
   },
   {
@@ -360,11 +360,11 @@
     "brandName": "Eiichiro Oda",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Aventura, Fantasia",
+    "gender": ["Aventura", "Fantasia"],
     "year": "2022",
-    "articleType": "Volume100",
+    "articleType": "Volume 100",
     "displayCategories": "Manga",
-    "category": "Manga - Volume100",
+    "category": "Manga - Volume 100",
     "rating": { "rate": 10, "count": 767 }
   },
   {
@@ -376,11 +376,11 @@
     "brandName": "One",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Comédia, Super-herói",
+    "gender": ["Ação", "Comédia", "Super-herói"],
     "year": "2009",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 472 }
   },
   {
@@ -392,11 +392,11 @@
     "brandName": "Jun Maeda",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Comédia dramática, Sobrenatural",
+    "gender": ["Comédia dramática", "Sobrenatural"],
     "year": "2015",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 174 }
   },
   {
@@ -408,11 +408,11 @@
     "brandName": "Jun Maeda",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Comédia dramática, Sobrenatural",
+    "gender": ["Comédia dramática", "Sobrenatural"],
     "year": "2015",
-    "articleType": "Volume2",
+    "articleType": "Volume 2",
     "displayCategories": "Manga",
-    "category": "Manga - Volume2",
+    "category": "Manga - Volume 2",
     "rating": { "rate": 9, "count": 95 }
   },
   {
@@ -424,11 +424,11 @@
     "brandName": "Kohei Horikoshi",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Aventura, Ficção Científica, Super-herói",
+    "gender": ["Aventura", "Ficção Científica", "Super-herói"],
     "year": "2014",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 3718 }
   },
   {
@@ -440,11 +440,11 @@
     "brandName": "Kohei Horikoshi",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Aventura, Ficção Científica, Super-herói",
+    "gender": ["Aventura", "Ficção Científica", "Super-herói"],
     "year": "2014",
-    "articleType": "Volume2",
+    "articleType": "Volume 2",
     "displayCategories": "Manga",
-    "category": "Manga - Volume2",
+    "category": "Manga - Volume 2",
     "rating": { "rate": 10, "count": 2660 }
   },
   {
@@ -456,11 +456,11 @@
     "brandName": "Tang Jia San Shao",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Drama, Ecchi, Fantasia, Harem, Maduro, Xuanhuan",
+    "gender": ["Ação", "Aventura", "Comédia", "Drama", "Ecchi", "Fantasia", "Harem", "Maduro", "Xuanhuan"],
     "year": "2011",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 8, "count": 1522 }
   },
   {
@@ -472,11 +472,11 @@
     "brandName": "Yukito Ayatsuji, Hiro Kiyohara",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Horror, Mistério, Sobrenatural",
+    "gender": ["Horror", "Mistério", "Sobrenatural"],
     "year": "2013",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 14 }
   },
   {
@@ -488,11 +488,11 @@
     "brandName": "Yomi Sarachi",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Mistério, Ficção Científica, Thriller",
+    "gender": ["Mistério", "Ficção Científica", "Thriller"],
     "year": "2021",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 54 }
   },
   {
@@ -504,11 +504,11 @@
     "brandName": "Yomi Sarachi",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Mistério, Ficção Científica, Thriller",
+    "gender": ["Mistério", "Ficção Científica", "Thriller"],
     "year": "2015",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 12 }
   },
   {
@@ -520,11 +520,11 @@
     "brandName": "Sui Ishida",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Fantasia Sombria, Suspense, Terror",
+    "gender": ["Fantasia Sombria", "Suspense", "Terror"],
     "year": "2015",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 6692 }
   },
   {
@@ -536,11 +536,11 @@
     "brandName": "Ryukishi07",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Mistério de Assassinato, Horror Psicológico, Horror Sobrenatural",
+    "gender": ["Mistério de Assassinato", "Horror Psicológico", "Horror Sobrenatural"],
     "year": "2008",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 310 }
   },
   {
@@ -552,11 +552,11 @@
     "brandName": "Makoto Kedouin",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Drama, Horror, Mistério, Psicológico, Romance, Escola, Shounen, Sobrenatural, Tragédia",
+    "gender": ["Drama", "Horror", "Mistério", "Psicológico", "Romance", "Escola", "Shounen", "Sobrenatural", "Tragédia"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 203 }
   },
   
@@ -569,11 +569,11 @@
     "brandName": "Lynn Okamoto",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Fantasia Sombria, Ficção Científica",
+    "gender": ["Fantasia Sombria", "Ficção Científica"],
     "year": "2019",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 489 }
     },
     {
@@ -585,11 +585,11 @@
     "brandName": "Sakae Esunoi",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Mistério, Thriller Psicológico, Romance",
+    "gender": ["Mistério", "Thriller Psicológico", "Romance"],
     "year": "2011",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 9, "count": 12 }
     },
     {
@@ -601,11 +601,11 @@
     "brandName": "Nanase Ohkawa",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia de Terror, Suspense",
+    "gender": ["Ação", "Fantasia de Terror", "Suspense"],
     "year": "2013",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 8, "count": 40 }
     },
     {
@@ -617,11 +617,11 @@
     "brandName": "Yusei Matsui",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Ação, Ficção Científica, Comédia",
+    "gender": ["Ação", "Ficção Científica", "Comédia"],
     "year": "2014",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 2593 }
     },
     {
@@ -633,11 +633,11 @@
     "brandName": "Haro Aso",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Horror Sobrenatural, Sobrevivência, Suspense",
+    "gender": ["Horror Sobrenatural", "Sobrevivência", "Suspense"],
     "year": "2012",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 563 }
     },
     {
@@ -649,11 +649,11 @@
     "brandName": "Yoshitoki Oima",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Drama",
+    "gender": ["Drama"],
     "year": "2013",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 1714 }
     },
     {
@@ -665,11 +665,11 @@
     "brandName": "Kaiu Shirai",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Fantasia Sombria, Ficção Científica, Suspense",
+    "gender": ["Fantasia Sombria", "Ficção Científica", "Suspense"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 1114 }
     },
     {
@@ -681,11 +681,11 @@
     "brandName": "Hiromu Arakawa",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia dramática, Steampunk, Fantasia científica, Tragédia",
+    "gender": ["Ação", "Aventura", "Comédia dramática", "Steampunk", "Fantasia científica", "Tragédia"],
     "year": "2005",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 1092 }
     },
     {
@@ -697,11 +697,11 @@
     "brandName": "Kumo Kagyu",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Fantasia sombria",
+    "gender": ["Fantasia sombria"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 9, "count": 1734 }
     },
     {
@@ -713,11 +713,11 @@
     "brandName": "Er Gen",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Drama, Xianxia",
+    "gender": ["Ação", "Aventura", "Drama", "Xianxia"],
     "year": "2014",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Web Novel",
-    "category": "Web Novel - Volume1",
+    "category": "Web Novel - Volume 1",
     "rating": { "rate": 8, "count": 185 }
     },
     {
@@ -729,11 +729,11 @@
     "brandName": "Nam Heesung",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Fantasia, Artes Marciais, Sci-fi, Shounen",
+    "gender": ["Ação", "Aventura", "Comédia", "Fantasia", "Artes Marciais", "Sci-fi", "Shounen"],
     "year": "2007",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Web Novel",
-    "category": "Web Novel - Volume1",
+    "category": "Web Novel - Volume 1",
     "rating": { "rate": 9, "count": 1734 }
     },
     {
@@ -745,11 +745,11 @@
     "brandName": "Hitoshi Iwaaki",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Terror, Drama, Ficção Científica",
+    "gender": ["Ação", "Terror", "Drama", "Ficção Científica"],
     "year": "1988",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 449 }
     },
     {
@@ -761,11 +761,11 @@
     "brandName": "Sha Liang",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Drama",
+    "gender": ["Drama"],
     "year": "2010",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Web Novel",
-    "category": "Web Novel - Volume1",
+    "category": "Web Novel - Volume 1",
     "rating": { "rate": 10, "count": 1929 }
     },
     {
@@ -777,11 +777,11 @@
     "brandName": "Tappei Nagatsuki",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Fantasia, Romance, Drama",
+    "gender": ["Ação", "Aventura", "Fantasia", "Romance", "Drama"],
     "year": "2016",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Light Novel",
-    "category": "Light Novel - Volume1",
+    "category": "Light Novel - Volume 1",
     "rating": { "rate": 10, "count": 2276 }
     },
     {
@@ -793,11 +793,11 @@
     "brandName": "Tang Jia San Shao",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Drama, Fantasia, Harem",
+    "gender": ["Ação", "Aventura", "Comédia", "Drama", "Fantasia", "Harem"],
     "year": "2020",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 8, "count": 79 }
     },
     {
@@ -809,11 +809,11 @@
     "brandName": "Kataoka Jinsei",
     "season": "Verão",
     "usage": "Coleção",
-    "gender": "Shounen, Ação, Drama, Tragédia, Horror, Fantasia, Ficção Científica, Ecchi",
+    "gender": ["Shounen", "Ação", "Drama", "Tragédia", "Horror", "Fantasia", "Ficção Científica", "Ecchi"],
     "year": "2007",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 1218 }
     },
     {
@@ -825,11 +825,11 @@
     "brandName": "Park Saenal",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação Aventura Comédia Fantasia Harem",
+    "gender": ["Ação", "Aventura", "Comédia", "Fantasia", "Harem"],
     "year": "2017",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 10, "count": 1669 }
     },
     {
@@ -841,11 +841,11 @@
     "brandName": "Sadoyeon",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Fantasia, Mistério, Sobrenatural, Tragédia",
+    "gender": ["Ação", "Aventura", "Fantasia", "Mistério", "Sobrenatural", "Tragédia"],
     "year": "2019",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 10, "count": 614 }
     },
     {
@@ -857,11 +857,11 @@
     "brandName": "Sing n Song",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Drama, Fantasia, Maduro, Mistério, Psicológico, Ficção Científica, Seinen, Sobrenatural, Tragédia",
+    "gender": ["Ação", "Aventura", "Drama", "Fantasia", "Maduro", "Mistério", "Psicológico", "Ficção Científica", "Seinen", "Sobrenatural", "Tragédia"],
     "year": "2020",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 10, "count": 167 }
     },
     {
@@ -873,11 +873,11 @@
     "brandName": "Ro Yu-jin",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Fantasia, Magia, Seinen, Sobrenatural",
+    "gender": ["Ação", "Aventura", "Fantasia", "Magia", "Seinen", "Sobrenatural"],
     "year": "2020",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 10, "count": 643 }
     },
     {
@@ -889,11 +889,11 @@
     "brandName": "Daul",
     "season": "Inverno",
     "usage": "Coleção",
-    "gender": "Ação, Aventura, Comédia, Fantasia, Isekai, Shounen",
+    "gender": ["Ação", "Aventura", "Comédia", "Fantasia", "Isekai", "Shounen"],
     "year": "2020",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 9, "count": 111 }
     },
     {
@@ -905,11 +905,11 @@
     "brandName": "한중월야",
     "season": "Outono",
     "usage": "Coleção",
-    "gender": "Ação, Fantasia, Harem, Artes Marciais, Romance, Sci-fi, Seinen, Sobrenatural, Wuxia",
+    "gender": ["Ação", "Fantasia", "Harem", "Artes Marciais", "Romance", "Sci-fi", "Seinen", "Sobrenatural", "Wuxia"],
     "year": "2021",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manhwa",
-    "category": "Manhwa - Volume1",
+    "category": "Manhwa - Volume 1",
     "rating": { "rate": 8, "count": 1551 }
     },
     {
@@ -921,11 +921,11 @@
     "brandName": "Yoshifumi Tozuka",
     "season": "Primavera",
     "usage": "Coleção",
-    "gender": "Ação, Comédia, Drama, Ecchi, Ficção Científica, Shounen, Sobrenatural",
+    "gender": ["Ação", "Comédia", "Drama", "Ecchi", "Ficção Científica", "Shounen", "Sobrenatural"],
     "year": "2021",
-    "articleType": "Volume1",
+    "articleType": "Volume 1",
     "displayCategories": "Manga",
-    "category": "Manga - Volume1",
+    "category": "Manga - Volume 1",
     "rating": { "rate": 10, "count": 757 }
     }
    ],

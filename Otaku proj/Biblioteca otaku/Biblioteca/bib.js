@@ -14,19 +14,20 @@ async function ler(filtro = "", filtro2 = "", filtro3 = "", filtro4 = "") {
   const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
   const base = await response.json();
   let produtos = base.itens;
-  var letra = filtro4
+  var letra = filtro4;
   produtos = produtos.filter(product => {
-    const { gender, displayCategories, season } = product;
+    const { gender, displayCategories, season, articleType } = product;
     const desiredGender = filtro.toLowerCase();
     const desiredCategory = filtro2.toLowerCase();
     const desiredSeason = filtro3.toLowerCase();
+    product.category = [displayCategories, articleType];
     return (
-      (!filtro || (gender && gender.toLowerCase().includes(desiredGender))) &&
+      (!filtro || (gender && gender.some(g => g.toLowerCase().includes(desiredGender)))) &&
       (!filtro2 || (displayCategories && displayCategories.toLowerCase() === desiredCategory)) &&
       (!filtro3 || (season && season.toLowerCase() === desiredSeason))
     );
   });
-  produtos = FiltroLetra(produtos, letra)
+  produtos = FiltroLetra(produtos, letra);
   changeCard(produtos);
 }
 function FiltroLetra(p, l){

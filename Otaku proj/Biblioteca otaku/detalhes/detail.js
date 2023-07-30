@@ -15,7 +15,7 @@ function change(prod) {
   document.getElementById('Est').innerHTML = stars2;
 
   document.getElementById('count').textContent = `Votos ${rating.count.toLocaleString()}`;
-  document.getElementById('gen').textContent = `Gêneros: ${gender}`;
+  document.getElementById('gen').textContent = `Gêneros: ${gender.join(", ")}`;
   document.getElementById('ye').textContent = `Ano de lançamento: ${year}`;
   document.getElementById('brand').textContent = `Autor: ${brandName}`;
   document.getElementById('descr').textContent = description;

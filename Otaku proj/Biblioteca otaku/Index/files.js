@@ -15,11 +15,12 @@ async function ler(filtro1 = "", filtro2 = "") {
   const carrossa = base.carr;
   const produtos2 = base.itens;
   produtos = produtos.filter(prods=>{
-    const { gender, displayCategories } = prods;
+    const { gender, displayCategories, articleType } = prods;
       const desiredGender = filtro1.toLowerCase();
       const desiredCategory = filtro2.toLowerCase();
+      prods.category = [displayCategories, articleType];
       return(
-        (!filtro1 || (gender && gender.toLowerCase().includes(desiredGender)))&&
+        (!filtro1 || (gender && gender.some(g => g.toLowerCase().includes(desiredGender))))&&
         (!filtro2 || (displayCategories && displayCategories.toLowerCase() === desiredCategory))
       );
   });
