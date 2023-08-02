@@ -134,7 +134,7 @@ function changeCar(produtos) {
   ins.innerHTML = `
     <div class="carousel-item active">
       <a href="detalhes/detail.html" id="c0">
-        <img src="${produtos[0].image}" height="400px" width="600px" class="d-block w-100" alt="Imagem do anime overlord do carosel de imagens">
+        <img src="${produtos[0].image}" height="400px" width="600px" class="d-block w-100" alt="Imagem carrossel 0">
       </a>
     </div>
   `;
@@ -144,7 +144,7 @@ function changeCar(produtos) {
     ins.insertAdjacentHTML('beforeend', `
       <div class="carousel-item" data-bs-interval="3000" data-bs-pause="hover">
         <a href="detalhes/detail.html" id="c${i}">
-          <img src="${produto.image}" height="400px" width="600px" class="d-block w-100" alt="Imagem do anime overlord do carosel de imagens">
+          <img src="${produto.image}" height="400px" width="600px" class="d-block w-100" alt="Imagem carrossel ${i}">
         </a>
       </div>
     `);
