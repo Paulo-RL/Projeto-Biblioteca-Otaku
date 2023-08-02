@@ -57,7 +57,7 @@ function removerItem(itemID) {
 }
 
 async function fetchItemDetails(itemID) {
-  const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+  const response = await fetch('/base.json');
   const base = await response.json();
   let it = base.itens.find(item => item.id === parseInt(itemID));
   return it;
@@ -65,7 +65,7 @@ async function fetchItemDetails(itemID) {
 
 async function fetchItemPrices(itemIDs) {
   try {
-    const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+    const response = await fetch('/base.json');
     const base = await response.json();
 
     const prices = itemIDs.map(itemID => {

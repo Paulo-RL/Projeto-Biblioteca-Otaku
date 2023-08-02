@@ -41,7 +41,7 @@ async function pes2() {
   if (p) {
     document.getElementById('bPp').value = p;
     const vem = document.getElementById('bPp').value;
-    const baseResponse = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+    const baseResponse = await fetch('/base.json');
     const base = await baseResponse.json();
     const produtos = base.itens;
     const resultados = buscarPorLetras(vem, produtos);
@@ -60,7 +60,7 @@ async function pes2() {
       pes3();
     }
     else if(CSSTEST){
-      const baseResponse = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+      const baseResponse = await fetch('/base.json');
       const base = await baseResponse.json();
       const produtos = base.itens;
       const ADMProds= produtos.slice(0, 11)
@@ -71,7 +71,7 @@ async function pes2() {
 
 async function pes3() {
   const vem = document.getElementById('bPp').value;
-  const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+  const response = await fetch('/base.json');
   const base = await response.json();
   const produtos = base.itens;
   const resultados = buscarPorLetras(vem, produtos);
@@ -205,7 +205,7 @@ document.getElementById('bPp').addEventListener('keydown', (e) => {
 
 
 function trocarPagina2() {
-  window.location.href = '/Otaku proj/Biblioteca otaku/detalhes/detail.html';
+  window.location.href = '/detalhes/detail.html';
 }
 
 /* function buscarPorLetras(vem, produtos) {

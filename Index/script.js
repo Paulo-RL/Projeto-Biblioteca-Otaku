@@ -57,7 +57,7 @@ function Body(){
                     <!-- Os melhores produtos são baseados na minha opinião, por isso peço que não os julgue -->
                     <div id="mpCont" class="row"></div>
 
-                    <button type="submit" class="btn btn-outline-success my-2" onclick="window.location.href ='/Otaku proj/Biblioteca otaku/Biblioteca/bib.html' ">Veja mais produtos</button>
+                    <button type="submit" class="btn btn-outline-success my-2" onclick="window.location.href ='Biblioteca/bib.html' ">Veja mais produtos</button>
 
                 </div>
                 <div class="row mt-3 bg-dark rounded" >

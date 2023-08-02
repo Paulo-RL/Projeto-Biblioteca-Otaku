@@ -20,7 +20,7 @@ function OpenBox() {
 
 function OpenCad2() {
   document.getElementById('LC').innerHTML = `
-    <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
+    <img src="/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
     <div>
     <p class="LCT">Cadastro</p>
 
@@ -48,7 +48,7 @@ function OpenCad2() {
 
 function OpenLog2() {
   document.getElementById('LC').innerHTML = `
-    <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
+    <img src="/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
     <div>
     <p class="LCT">Login</p>
 
@@ -202,7 +202,7 @@ function ADM() {
   </li>`;
   console.log('Administrator mode activated');
   document.getElementById('SP').innerHTML = 'Status: Administrador';
-  document.getElementById('IP').src = "/Otaku proj/Biblioteca otaku/imagens/imagem%20logo.png";
+  document.getElementById('IP').src = "/imagens/imagem%20logo.png";
 }
 
 function ll() {
@@ -259,7 +259,7 @@ function perfil(Login) {
   const pfl = document.getElementById('perfil');
   pfl.innerHTML = `
     <div class="perfilInfo">
-      <img src="/Otaku proj/Biblioteca otaku/imagens/close.png" id="cl" alt="Fechar perfil" onclick="OpenPerf()">
+      <img src="/imagens/close.png" id="cl" alt="Fechar perfil" onclick="OpenPerf()">
       <img src="" class="IP" id="IP" alt="">
       <p class="TP">Perfil do usuário</p>
       <p class="NP" id="NP">Nome do usuário</p>
@@ -340,7 +340,7 @@ function LO() {
       OpenBox();
       return;
     }
-    document.getElementById('IP').src = "/Otaku proj/Biblioteca otaku/imagens/perfiljpg.jpg";
+    document.getElementById('IP').src = "/imagens/perfiljpg.jpg";
     OpenBox();
   } else {
     UN.innerHTML = `<li class="nav-item">

@@ -11,7 +11,7 @@ function filtro() {
 }
 
 async function ler(filtro = "", filtro2 = "", filtro3 = "", filtro4 = "") {
-  const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+  const response = await fetch('/base.json');
   const base = await response.json();
   let produtos = base.itens;
   var letra = filtro4;
@@ -131,7 +131,7 @@ function changeCard(produtos) {
         <div class="card" id="Cards">
           <img src="${produto.image}" value="" class="card-img-top" alt="Imagem produto ${cardIndex}" id="imCa">
           <div class="card-body">
-            <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="b${cardIndex}">
+            <a href="/detalhes/detail.html" id="b${cardIndex}">
               <h5 class="card-title" id="TiCr">${produto.title}</h5>
             </a>
             <p class="card-text">R$${parseFloat(produto.price).toFixed(2)}</p>

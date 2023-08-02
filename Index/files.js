@@ -9,7 +9,7 @@ function filtro() {
 }
 
 async function ler(filtro1 = "", filtro2 = "") {
-  const response = await fetch('/Otaku proj/Biblioteca otaku/base.json');
+  const response = await fetch('base.json');
   const base = await response.json();
   var produtos = base.itens;
   const carrossa = base.carr;
@@ -105,7 +105,7 @@ function changeMP(produtos) {
         <img src="${selectedItem.image}" height="110px" width="80px" class="imgMP" alt="Imagem melhores produtos ${selectedItem.title}">
       </div>
       <div class="col-9 col-md-7 col-lg-9 border-bottom border-danger" id="MPC${i + 1}">
-        <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="g${selectedItem.id}">
+        <a href="detalhes/detail.html" id="g${selectedItem.id}">
           <p class="tituloMP">${selectedItem.title}</p>
         </a>
         <p class="estrelasMP">
@@ -133,7 +133,7 @@ function changeCar(produtos) {
   const ins = document.getElementById('cIns');
   ins.innerHTML = `
     <div class="carousel-item active">
-      <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="c0">
+      <a href="detalhes/detail.html" id="c0">
         <img src="${produtos[0].image}" height="400px" width="600px" class="d-block w-100" alt="Imagem do anime overlord do carosel de imagens">
       </a>
     </div>
@@ -143,7 +143,7 @@ function changeCar(produtos) {
     const produto = produtos[i];
     ins.insertAdjacentHTML('beforeend', `
       <div class="carousel-item" data-bs-interval="3000" data-bs-pause="hover">
-        <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="c${i}">
+        <a href="detalhes/detail.html" id="c${i}">
           <img src="${produto.image}" height="400px" width="600px" class="d-block w-100" alt="Imagem do anime overlord do carosel de imagens">
         </a>
       </div>
@@ -197,7 +197,7 @@ function changeCard(produtos) {
         <div class="card" id="Cards">
           <img src="${produto.image}" value="" class="card-img-top" alt="Imagem produto ${cardIndex}" id="imCa">
           <div class="card-body">
-            <a href="/Otaku proj/Biblioteca otaku/detalhes/detail.html" id="b${cardIndex}">
+            <a href="detalhes/detail.html" id="b${cardIndex}">
               <h5 class="card-title" id="TiCr">${produto.title}</h5>
             </a>
             <p class="card-text">R$${parseFloat(produto.price).toFixed(2)}</p>
