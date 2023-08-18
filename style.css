@@ -1,7 +1,7 @@
 .card-item {
   margin-bottom: 20px;
-  min-width: calc(33%);
-  max-width: calc(30%);
+  min-width: 33%;
+  max-width: 30%;
 }
 
 .row-container:has(.single-card) #CardsCont {

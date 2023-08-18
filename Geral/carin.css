@@ -3,7 +3,7 @@
   top: 100px;
   right: 0%;
   background-color: rgba(0, 255, 255, 0.11);
-  width: calc(40%);
+  width: 40%;
   height: 100vh;
   z-index: 15;
   display: none;
@@ -60,14 +60,14 @@
 
 .recari {
   grid-area: recari;
-  max-width: calc(90%);
-  max-height: calc(70%);
+  max-width: 90%;
+  max-height: 70%;
   position: relative;
   background-color: transparent;
   border-color: blue;
   border-width: 0.3rem;
   color: blue;
-  font-size: calc(0.7vw);
+  font-size: 0.7vw;
 }
 
 .recari:hover {
@@ -118,7 +118,7 @@
 
 @media (min-width: 2000px) {
   .CC {
-    width: calc(40%);
+    width: 40%;
   }
   .recari {
     font-size: x-large;
@@ -144,7 +144,7 @@
 
 @media (max-width: 1500px) {
   .CC {
-    width: calc(60%);
+    width: 60%;
   }
   .recari {
     font-size: large;
@@ -160,7 +160,7 @@
 
 @media (max-width: 1200px) {
   .CC {
-    width: calc(60%);
+    width: 60%;
   }
   .recari {
     font-size: large;
@@ -176,7 +176,7 @@
 
 @media (max-width: 912px) {
   .CC {
-    width: calc(60%);
+    width: 60%;
     background-color: rgba(3, 85, 85, 0.9);
   }
   .recari {
@@ -193,14 +193,14 @@
 
 @media (max-width: 540px) {
   .CC {
-    width: calc(90%);
+    width: 90%;
     background-color: rgba(3, 85, 85, 0.9);
   }
 }
 
 @media (max-width: 320px) {
   .CC {
-    width: calc(90%);
+    width: 90%;
     background-color: rgba(3, 85, 85, 0.9);
   }
   .recari {
@@ -208,6 +208,10 @@
   }
   .ticari {
     font-size: larger;
+  }
+  .carrinho{
+    position: relative;
+    left: 100%;
   }
 }
 

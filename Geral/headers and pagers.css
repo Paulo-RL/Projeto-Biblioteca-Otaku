@@ -17,7 +17,7 @@ width: 99.9vw;
 }
 
 .Logo {
-max-width: calc(6%);
+max-width: 6%;
 height: fit-content;
 position: absolute;
 left: -99%;
@@ -95,7 +95,7 @@ max-height: fit-content;
 max-height: 13%;
 }
 .Logo {
-max-width: calc(5%);
+max-width: 5%;
 left: 7%;
 }
 .BrPesq{
@@ -125,7 +125,7 @@ max-height: 13%;
 }
 .Logo {
 top: 20%;
-max-width: calc(7%);
+max-width:7%;
 }
 .BrPesq{
   left: 8%;
@@ -187,7 +187,7 @@ left: 10%;
 max-height: 13%;
 }
 .Logo {
-max-width: calc(10%);
+max-width: 10%;
 top: 30%;
 }
 .BrPesq {
@@ -225,7 +225,7 @@ top: 62%;
 }
 @media (max-width: 800px) {
 .Logo {
-max-width: calc(9%);
+max-width: 9%;
 }
 .BrPesq {
 position: relative;
@@ -328,7 +328,7 @@ left: -25%;
 }
 @media (max-width: 330px) {
 .Logo {
-max-width: calc(10%);
+max-width: 10%;
 top: 33%;
 left: 9%;
 }
@@ -348,7 +348,7 @@ top: 25%;
 
 @media (max-width: 280px) /* Bugou por algum motivo */ {
 .Logo {
-max-width: calc(11%);
+max-width: 11%;
 top: 30%;
 left: 8%;
 }
@@ -430,7 +430,7 @@ padding: 0%;
     top: 30%;
   }
   .Logo {
-    max-width: calc(70%);
+    max-width: 70%;
     position: relative;
     top: 30%;
     }
@@ -457,10 +457,17 @@ padding: 0%;
   .setaVolt{
     top: 5%;
   }
+  
 }
 @media (max-height: 852px) {
   .setaVolt{
-    top: 20%;
+    top: 9%;
+  }
+  .Logo{
+    top: 18%;
+  }
+  .contCAR2{
+    top: 30%;
   }
 }
 @media (max-height: 800px) {
@@ -650,8 +657,8 @@ justify-content: space-between;
 gap: 0;
 }  
 #imagemLogo{
-width:calc(7%);
-height:calc(7%);
+width:7%;
+height:7%;
 }
 .textoFooter{
 font-size: 20px;

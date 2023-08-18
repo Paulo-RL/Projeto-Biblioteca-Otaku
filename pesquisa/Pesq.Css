@@ -109,7 +109,7 @@ body{
 .PP{
   background-color: rgba(127, 255, 212, 0.575);
   position: relative;
-  left: calc(40%);
+  left: 40%;
   width: fit-content;
   font-size: calc(1rem * 1.1);
   padding: auto;

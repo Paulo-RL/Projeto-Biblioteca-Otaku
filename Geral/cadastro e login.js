@@ -41,7 +41,7 @@ function OpenCad2() {
         Senha:
         <input type="password" id="IPS">
         </div>
-        <button type="submit">Cadastrar</button>
+        <button type="submit" class="IBC">Cadastrar</button>
     </form>
 </div>`;
 }
@@ -61,7 +61,7 @@ function OpenLog2() {
         Senha:
         <input type="password" id="IPSL">
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" class="IBL">Login</button>
     </form>
 </div>`;
 }

@@ -4,7 +4,7 @@
   top: 100px;
   right: 1%;
   background-color: rgba(0, 255, 255, 0.11);
-  width: calc(30%);
+  width: 30%;
   height: 100vh;
   z-index: 15;
   display: none;
@@ -71,7 +71,7 @@
   border-color: blue;
   border-width: 0.3rem;
   color: blue;
-  font-size: calc(0.7vw);
+  font-size: 0.7vw;
 }
 
 .recari:hover {
@@ -121,7 +121,7 @@
 
 @media (min-width: 2000px) {
   .CC {
-    width: calc(30%);
+    width: 30%;
   }
   .caripro{
     height: 17vh;
@@ -198,7 +198,7 @@
 
 @media (max-width: 540px) {
   .CC {
-    width: calc(50%);
+    width: 50%;
   }
   .clo{
     width: 5%;
@@ -210,7 +210,7 @@
 
 @media (max-width: 320px) {
   .CC {
-    width: calc(90%);
+    width: 90%;
   }
 }
 @media (max-height: 535px) {
